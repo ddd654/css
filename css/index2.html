@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* css 
+        디자인 시작전에 전체 디자인
+        */
+        * {}
+
+        b {
+            color: red;
+        }
+
+        ul,
+        li,
+        ol,
+        di,
+        dd {
+            list-style: none;
+        }
+
+        #a1 {
+            color: red;
+        }
+
+        .a2 {
+            color: blue;
+        }
+
+        .box p {
+            color: tomato;
+        }
+
+        /* 클래스 box 자식의 p태그 */
+        .box>p {
+            color: rgb(217, 255, 0);
+        }
+
+        /* 클래스 box 직계자식 p태그 */
+
+        /*  */
+        /* input[속성=값] */
+        input[name=aaa] {
+            color: red;
+        }
+
+        .wrap>input[name=aaa] {
+            color: blue;
+        }
+
+        /* 가상선택자 - 태그 동작 */
+        b:active {
+            color: greenyellow;
+            border: 1px dotted darkblue;
+        }
+
+        ul>li:hover {
+            color: green;
+        }
+
+        input[name=aaa]:focus {
+            border: 3px solid red;
+            outline: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <b>태그선택자</b>
+    <b>태그선택자</b>
+    <b>태그선택자</b>
+    <b>태그선택자</b>
+
+    <ul>
+        <li>콤마선택</li>
+        <li>콤마선택</li>
+
+    </ul>
+
+    <!-- 아이디는 고유 -->
+    <p id="a1">아이디선택자</p>
+    <p class="a2">클래스선택자</p>
+    <p class="a2">클래스선택자</p>
+
+    <!-- 공백 -->
+
+    <div class="box">
+        <p>하위선택자</p>
+        <p>하위선택자</p>
+
+        <ul>
+            <li>
+                <p>하위 선택자</p>
+            </li>
+            <li>
+                <p>하위 선택자</p>
+            </li>
+            <li>
+                <p>하위 선택자</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wrap">
+        <input type="text" name="aaa">
+        <input type="text" name="">
+    </div>
+
+
+
+
+</body>
+
+</html>
