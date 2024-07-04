@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box {
+        border: 1px solid #777;
+    }
+
+    .box>.inner {
+        display: inline;
+    }
+
+    .box>span {
+        display: block;
+    }
+
+    .box>a {
+        border: 1px solid #777;
+        height: 100px;
+        width: 100px;
+
+        display: inline-block;
+        /*가로로 배치하되 블럭속성을 갖는다*/
+    }
+</style>
+
+<body>
+
+    <!-- 블럭태그를 인라인으로 -->
+    <div class="box">
+        <div class="inner">블럭</div>
+        <div class="inner">블럭</div>
+        <div class="inner">블럭</div>
+    </div>
+
+
+    <div class="box">
+        <span>인라인태그</span>
+        <span>인라인태그</span>
+        <span>인라인태그</span>
+    </div>
+
+    <!--  -->
+    <div class="box">
+        <a href="#">인라인블럭</a>
+        <a href="#">인라인블럭</a>
+        <a href="#">인라인블럭</a>
+    </div>
+
+    <div class="box" style="display: none;">
+        <p class="msg">아이디 비밀번호를 확인하세요</p>
+    </div>
+
+
+</body>
+
+</html>

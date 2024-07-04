@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    p {
+        /* 블럭 속성인 p 태그여서 가능하다
+        미리 머릿속으로 그려가면서 사용해야 한다
+        인라인 블럭
+        */
+        text-align: left;
+        /*글 정렬*/
+        letter-spacing: -1px;
+        /* 자간*/
+
+        border: 1px solid #777;
+    }
+
+    div {
+        border: 1px solid #777;
+
+        vertical-align: top;
+        /* 세로 정렬*/
+        /* 속성을 줘도 바뀌지 않으면 거기가 아니거나 상태가 아님 */
+
+
+    }
+
+    div>img {
+        vertical-align: top;
+    }
+
+    .box {
+        /* 기준이 되는 태그가 없을떄 수직정렬 할때는 line-height와 높이와 동일하게 맞춥니다 */
+
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    a{
+        /* a링크 밑줄 없애기 */
+        text-decoration: none;
+        color: #000;
+    }
+</style>
+
+<body>
+
+    <p>hello world</p>
+
+    <div>
+        hello world
+        <img src="img/css3.png" alt="제목">
+    </div>
+
+    <div class="box" style="height: 100px;">
+        hello world
+    </div>
+
+    <a href="#">에이링크는 텍스트 데코레이션을 갖고 있음</a>
+
+</body>
+
+</html>

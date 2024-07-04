@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    #section{
+        height: 500px;
+        border: 1px solid #777;
+        background-image: url(img/5591276.jpg);
+
+        /*사진 크기 속성*/
+        background-repeat: no-repeat;
+        background-size: contain; /*이미지가 잘리지 않도록 하고, 남는 공간은 비운다*/
+        background-size: cover; /*빈 공간없이 채우고, 남은 이미지를 자른다*/
+
+    }
+
+    #mid{
+        height: 800px;
+        border: 1px solid #777;
+        background-image: url(img/back.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        background-attachment: fixed; /*scroll 기본값, fixed 쓰면 입체적인 효과가 있다*/
+    }
+
+
+
+
+</style>
+
+<body>
+    
+    <section id="section">
+        
+    </section>
+
+    <section id="mid">
+
+    </section>
+
+    <section style="height: 1000px;">
+
+    </section>
+
+</body>
+</html>

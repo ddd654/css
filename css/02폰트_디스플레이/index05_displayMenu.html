@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    .menu{
+        background-color: pink;
+        text-align: center;
+    }
+    .menu > li {
+        display: inline;
+    }
+    .menu > li > a{
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+
+        /* 세로로 가운데 정렬 */
+        line-height: 80px; /*height 크기 똑같이 맞춰서*/
+        color: red;
+        text-decoration: none;
+
+    }
+
+    .menu > li > a:hover {
+        background-color: rgba(172, 255, 47, 0.541);
+    }
+
+
+</style>
+
+<body>
+
+    <ul class="menu">
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+    </ul>
+
+    
+</body>
+
+</html>
