@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{padding: 0; margin: 0;}
+    ul, li{list-style: none;}
+
+    .box{ width: 800px; margin: 0 auto; border: 1px solid #777; overflow: hidden; }
+    .box > .card{ float: left; width: 25%; border:1px solid #777; box-sizing: border-box; }
+
+    .content {overflow: hidden;}
+    .content > .left{float: left;}
+    .content > .right{float: right;}
+
+    .btn-area{overflow: hidden;}
+    .btn-area > .left {float: left; width: 50%;}
+
+
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="card">
+            <img src="img/bgimg.png" alt="상품">
+            
+            <div class="content">
+                <ul class="left">
+                    <li>좌측</li>
+                    <li>좌측1</li>
+                    <li>좌측2</li>
+                </ul>
+                <strong class="right">우측</strong>
+                <div class="price" style="clear: both;">가격영역</div> <!--clear: both는 float의 영향을 받지않게 한다-->
+            </div>
+
+            <!-- <div class="price">가격영역</div> -->
+
+            <div class="btn-area">
+                <button type="button" class="left">장바구니</button>
+                <button type="button" class="left">구매하기</button>
+            </div>
+        </div>
+        
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        
+        <div class="card">
+            <img src="img/bgimg.png" alt="상품">
+            <div class="content">
+                <ul class="left">
+                    <li>좌측</li>
+                    <li>좌측1</li>
+                    <li>좌측2</li>
+                </ul>
+                <strong class="right">우측</strong>
+
+            </div>
+            <div class="price">가격영역</div>
+            <div class="btn-area">
+                <button type="button" class="left">장바구니</button>
+                <button type="button" class="left">구매하기</button>
+            </div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+
+        <div class="card">
+            <img src="img/bgimg.png" alt="상품">
+            <div class="content">
+                <ul class="left">
+                    <li>좌측</li>
+                    <li>좌측1</li>
+                    <li>좌측2</li>
+                </ul>
+                <strong class="right">우측</strong>
+
+            </div>
+            <div class="price">가격영역</div>
+            <div class="btn-area">
+                <button type="button" class="left">장바구니</button>
+                <button type="button" class="left">구매하기</button>
+            </div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+
+        <div class="card">
+            <img src="img/bgimg.png" alt="상품">
+            <div class="content">
+                <ul class="left">
+                    <li>좌측</li>
+                    <li>좌측1</li>
+                    <li>좌측2</li>
+                </ul>
+                <strong class="right">우측</strong>
+
+            </div>
+            <div class="price">가격영역</div>
+            <div class="btn-area">
+                <button type="button" class="left">장바구니</button>
+                <button type="button" class="left">구매하기</button>
+            </div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+    
+
+</body>
+
+</html>

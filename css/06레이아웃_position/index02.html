@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0;}
+
+        .wrap{ width: 500px; margin: 0 auto; border: 1px solid #888; overflow: hidden;}
+        .wrap > .box {float: left; width: 20%; border: 1px solid #777; box-sizing: border-box; height: 100px;}
+
+        /* 부모에 relative 기준 */
+        /* .wrap > .box {position: relative;} */
+        .wrap {position: relative;}
+
+        .pos{
+            background-color: yellow;
+            position: absolute; left: 20px; bottom: 10px;
+            z-index: 6;
+
+        }
+
+        .rel {
+            /* relative는 z 축에서 끌어올림 */
+            background-color: rgb(255, 196, 118);
+            position: relative;
+            left: -70px;
+            z-index: 5;
+        }
+    </style>
+
+</head>
+
+    
+
+<body>
+
+    <div class="wrap">
+        <div class="box">박스1</div>
+        <div class="box rel">박스2</div>
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">
+            박스1
+            <p class="pos">포지션</p>
+        </div>
+    </div>
+
+</body>
+</html>

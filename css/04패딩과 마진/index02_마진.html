@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,33 @@
 
 
 
-    <style>
-        body{
-            background-image: url(img/bg_grid.jpg);
-        }
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
 
-        p{
-            border: 1px solid #777;
-            width: 600px;
-            height: 100px;
-            background-color: rgb(167, 255, 255);
+    body {
+        background-image: url(img/bg_grid.jpg);
+    }
 
-            /* margin: 20px;  */
-            margin: 10px 20px 30px 40px; /*패딩처럼 시계방향 상우하좌*/
+    p {
+        border: 1px solid #777;
+        width: 600px;
+        height: 100px;
+        background-color: rgb(167, 255, 255);
 
-        }
+        /* margin: 20px;  */
+        margin: 10px 20px 10px 20px;
+        /*패딩처럼 시계방향 상우하좌*/
 
+        /**/
+    }
 </style>
-
-    
-
-
-
 
 
 <body>
-    
+
     <p>
         마진이란? <br>
         마진은 윤곽 바깥여백 입니다
@@ -46,5 +48,12 @@
         마진은 겹친다
     </p>
 
+    <!-- margin: 0 auto로 해서 박스를 가운데로 옮길수 있다 - 중요 -->
+    <p class="box" style="margin: 0 auto;"> 
+        마진이란? <br>
+        마진은 윤곽 바깥여백 입니다
+        마진은 겹친다
+    </p>
 </body>
+
 </html>

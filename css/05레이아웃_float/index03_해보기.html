@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{padding: 0; margin: 0;}
+    ul, li{list-style: none;}
+
+    .box{width: 600px; margin: 0 auto; border: 1px solid #777; overflow: hidden;}
+    .box > .card1{float: left; width: 50%;}
+    .box > .content{float: right; width: 50%;}
+
+    .content {overflow: hidden; border: 4px solid #777; box-sizing: border-box;}
+    .content > .price {float: left; width: 50%; }
+    .content > .right {float: left; width: 50%; text-align: right}
+
+    .btn-area{overflow: hidden;}
+    .btn-area > .left {float: left; width: 50%;}
+
+/* -------------- */
+    .box2{width: 800px; border: 1px solid #777; overflow: hidden; margin: 0 auto;}
+    .box2 > .imgs,
+    .box2 > .content2 { float: left; width: 50%;}
+
+    .price2{overflow: hidden;}
+    .btn-area2{overflow: hidden;}
+
+    .control{margin-top: 50px;}
+    .control .left2{float: left;}
+    .control .right2{float: right;}
+    .control .btn-area2 button {width: 50%;}
+
+</style>
+
+<body>
+    <h2>과제2</h2>
+    <div class="box">
+        
+        <div class="card1">
+            사진
+        </div>
+        <div class="content">
+            <ul class="">
+                <li>제목</li>
+                <li>내용</li>
+            </ul>
+            <div class="price">가격</div>
+            <div class="right">10000원</div>
+            <div class="btn-area">
+                <button type="button" class="left">장바구니</button>
+                <button type="button" class="left">구매하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="box2">
+        <div class="imgs">사진</div>
+        <div class="content2">
+            <p>제목: 플롯이란</p>
+            <p>내용: --</p>
+            
+            <div class="control">
+                <div class="price2">
+                    <div class="left2">가격</div>
+                    <div class="right2">1000원</div>
+                </div>
+                <div class="btn-area2">
+                    <button type="button" class="left2">장바구니</button>
+                    <button type="button" class="right2">구매하기</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

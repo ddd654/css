@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        *{padding: 0;margin: 0;}
+
+        p{height: 100px;}
+        .box{width: 500px; margin: 0 auto;}
+
+        /* 1. 부모에 relative */
+        /* .content{position: relative;} */
+
+        .item1{background-color: blue;}
+        .item2{background-color: red; position: absolute; right: 20px; top: 10px;}
+        .item3{background-color: yellowgreen;}
+
+        /* 포지션을 적용할 태그에 absolute 
+         apsolute 를 사용하면, relative z축으로 정면으로 올라온다 = 1. 부모에 relative를 넣는다
+
+        2. left, right중 택1 / top, bottom 택1을 넣어서 위치를 잡는다
+
+        부모에 relative가 없으면, body영역 기준으로 위치를 잡는다
+        */
+
+</style>
+
+<body>
+    
+    <!-- apsolute  relative -->
+
+    <div class="box">
+        <div class="content">
+            <p class="item1">포지션</p>
+            <p class="item2">포지션</p>
+            <p class="item3">포지션</p>
+        </div>
+    </div>
+
+</body>
+</html>
