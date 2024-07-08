@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0;}
+        .reply-wrap {border: 1px solid #777; width: 500px; margin: 0 auto; position: relative; padding: 10px; 
+            overflow: hidden;}
+
+        .reply-wrap > .profile {position: absolute; left: 10px; right: 10px; width: 80px;}
+        .reply-content {padding-left: 90px;}
+        .reply-content .box textarea {width: 100%; box-sizing: border-box; min-height: 100px;
+            resize: vertical; padding: 5px;}
+
+        /* floaf 후에는 부모에 overflow hidden 필요 */
+        .control{overflow: hidden;}
+        .control .left{ float: left;}
+        .control .right{ float: right;}
+
+        /* input 태그 자체에 블럭처리해서 세로로 */
+        .control .left input {display: block;}
+        .control .left input:nth-child(2) {margin-top: 4px;}
+
+
+        /* ------------- */
+        .content-box { width: 400px; float: right; }
+        
+        .content-box2 {float: left;}
+
+        .button_box {float: right; width: 80px;  text-align: right;}
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="reply-wrap">
+        <img src="../05레이아웃_float/img/bgimg.png" alt="profile" class="profile">
+
+        <div class="reply-content">
+            <div class="box">
+                <textarea name="" id=""></textarea>
+            </div>
+
+            <div class="control">
+                <div class="left">
+                    <input type="text">
+                    <input type="text">
+                </div>
+                <button type="button" class="right">등록하기</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="reply-wrap">
+        <img src="/05레이아웃_float/img/bgimg.png" alt="" class="profile">
+        <div class="content-box">
+            <div class="content-box2">
+
+                <h2>과일</h2>
+                <p>내용</p>
+            </div>
+                
+            <div class="button_box">
+                <input type="button" value="삭제">
+                <input type="button" value="수정">
+                
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="reply-wrap">
+        <img src="/05레이아웃_float/img/bgimg.png" alt="">
+        <div class="content-box" style="min-height: 70px;">
+            <div class="control">
+            <div class="left">
+                <h3>제목</h3>
+                <p>내용</p>
+            </div>
+            <input type="button" class="right" value="삭제">
+            <input type="button" class="right" value="수정">
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

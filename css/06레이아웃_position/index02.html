@@ -9,9 +9,10 @@
         *{padding: 0; margin: 0;}
 
         .wrap{ width: 500px; margin: 0 auto; border: 1px solid #888; overflow: hidden;}
+        .wrap::after {overflow: hidden;}
         .wrap > .box {float: left; width: 20%; border: 1px solid #777; box-sizing: border-box; height: 100px;}
 
-        /* 부모에 relative 기준 */
+        /* 부모에 relative 기준 , 없으면 body 기준으로 움직인다*/
         /* .wrap > .box {position: relative;} */
         .wrap {position: relative;}
 
@@ -27,7 +28,8 @@
             background-color: rgb(255, 196, 118);
             position: relative;
             left: -70px;
-            z-index: 5;
+            top: 20px;
+            z-index: 8;
         }
     </style>
 

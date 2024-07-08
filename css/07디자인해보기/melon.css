@@ -1,0 +1,102 @@
+/*  */
+@import url(default.css);
+
+header{border-top: 3px solid #00d344 ;}
+.header .wrap{border-bottom: 1px solid #777;}
+.header .wrap .top {width: 1008px; margin: 0 auto; }
+
+.header .top{overflow: hidden;}
+.header .top .top_left{float: left; color: #999; font-size: 15px;
+font-weight: bold;
+padding: 9px 7px;}
+.header .top .top_right{float: right;}
+
+.top_right > ul > li {display: inline; border-left: 1px solid ;}
+
+.top_right > ul > li:nth-child(1){
+    /* border: 1px solid red; */
+    border: none;
+}
+.top_right > ul > li > a{
+    display: inline-block; 
+    font-size: 14px;
+    padding: 9px 7px;
+    color: #777;
+    text-decoration: none;
+
+}
+/* 멜론 이미지 가져와서 버튼 넣어보기 */
+.top_right > ul > li > a > span.m1{
+    /* span태그이면서 클래스가 m1인 것 선택하기 */
+
+    background-image: url(img/head_menu_201014.png);
+    background-repeat: no-repeat;
+
+    background-position: 0px -57px;
+    width: 75px;
+    height: 20px;
+    display: block;
+
+    text-indent: -999px;
+}
+
+/* 로고 넣기 */
+.header .mid {overflow: hidden; width: 1008px; margin: 0 auto;}
+.header .mid .mid_left{float: left; overflow: hidden;}
+.header .mid .mid_right{float: right;}
+
+.header .mid fieldset {
+    width: 330px;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    background-image:  url(img/bg_cmn_search322.png);
+    background-repeat: no-repeat;
+    border: none;
+
+}
+
+.mid_left > input{
+    float:left;
+    margin: 7px 0 0 18px;
+    
+    width: 249px;
+    /* width가 적용이 안되면 블럭속성으로 바꿈 */
+    display: block;
+    height: 20px;
+    border: none;
+
+    padding: 4px;
+}
+
+.mid_left > button {
+    float: right;
+    background-image: url(img/btn_search_bar.png);
+    width: 45px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: none;
+
+    /* 글자 구석으로 안보이게 날리기 */
+    text-indent: -9999px;
+    background-color: #fff;
+}
+
+.header .bottom{margin: 0 auto; overflow: hidden; width: 1008px;}
+.header .bottom .left {float: left; }
+.header .bottom .left li {display: inline; margin-left: 15px;}
+.header .bottom .left li a { 
+    text-decoration: none; 
+    color: #000; 
+    font-size: 20px;
+    font-weight: bold;
+
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    
+}
+.header .bottom .right {float: right; }
+.header .bottom .right li a {text-decoration: none; text-align: right; }
+
+
+

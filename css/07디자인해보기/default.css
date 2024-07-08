@@ -1,0 +1,13 @@
+
+/* 디자인이 공콩적으로 적용될 디자인 정의하기 */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul, li, ol, dl, dd{list-style: none;}
+
+/* 이미지 찌그러짐 방지 크기 따라가기*/
+img{max-width: 100%; height: auto;}
+
