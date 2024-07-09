@@ -1,0 +1,104 @@
+*{padding: 0; margin: 0;}
+ui, li {list-style: none;}
+a{text-decoration: none;}
+img{max-width: 100%; height: auto;}
+
+
+
+/* 반응형은 디자인 2개 */
+
+/* 최소 767px 부터 */
+@media(min-width: 767px) {
+    
+    #wrap{
+        width: 960px;
+        border: 1px solid #777;
+        margin: 0 auto;
+    }
+    #wrap .logo{
+        height: 280px;
+        background-image: url(images/bg.png);
+    }
+    #wrap .logo h3{
+        color: yellowgreen;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+    
+    #wrap nav{background-color: #c13333;}
+    #wrap nav > ul > li{display: inline;}
+    #wrap nav > ul > li > a{
+        display: inline-block;
+        padding: 20px 30px;
+        color: #fff;
+    }
+    #wrap nav > ul > li > a:hover{
+        background-color: #ffbf48;
+    }
+
+    #section{overflow: hidden;}
+    #section > .left{float: left; width: 760px; padding: 20px; box-sizing: border-box;}
+    #section > .right{float: right; width: 200px;}
+
+    #footer { background-color: #222222;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    }
+
+
+}
+
+
+/* 766이하일때 디자인 */
+@media(max-width:766px) {
+
+    /* wrap의 최대 크기*/
+    #wrap {
+        /* width: 100%;  */
+    
+        /* 350px부터 변하게 */
+        min-width: 350px;
+    }
+    #wrap .logo {
+        background: url(images/bg.png);
+        height: 280px;
+    }
+    #wrap .logo h3 {color: #ffbf48;font-weight: 600;
+        padding: 20px;}
+
+
+
+
+    #wrap nav > ul > li{}
+    #wrap nav > ul > li > a{
+        display: block;
+        color: white; 
+        background-color: #c13333;
+        width: 100%;
+
+        text-align: center;
+        padding: 10px 0px;
+
+        font-size: 10px;
+    }
+    #wrap nav > ul > li > a:hover{
+        background-color: #ffbf48;
+    }
+
+
+    #section {padding: 10px;}
+    #section .left h3{ padding: 10px;}
+    #section .right {padding-top: 10px;}
+    #section .right img{width: 100%;}
+    
+
+    #footer {
+        background-color: #222222;
+    }
+    #footer {
+        color: #fff;
+        text-align: center;
+    }
+
+}

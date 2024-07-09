@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'NanumSquareNeoBold';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf) format("truetype");
+}
+* {padding: 0; margin: 0;
+    font-family: NanumSquareNeoBold;}
+    ul, li, ol, dl, dd {list-style: none;}
+    img {max-width: 100%; height: auto;}
+* {
+    font-family: 'NanumSquareNeoBold';
+}
+
+table {
+    border: 1px solid red;
+}
+
+.number ul li{
+    display: inline;
+}

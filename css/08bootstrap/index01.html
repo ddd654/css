@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 css링크 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 제이쿼리, 부트스트랩보다 먼저 링크해야한다-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- 부트스트랩 js 링크 -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <button type="button" class="btn btn-info">Info</button>
+
+    <div style="width: 50%;">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+<!-- --------- -->
+    <div class="form-group">
+        <label for="usr">Name:</label>
+        <input type="text" class="form-control" id="usr">
+        <label for="usr">Name:</label>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+      </div>
+
+      <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+    <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+    <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+
+
+
+<!-- ---------- -->
+    !<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#yourModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="yourModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      
+</body>
+
+</html>

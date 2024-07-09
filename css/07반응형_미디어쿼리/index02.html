@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* 공통부분 */
+    .box {width: 80%; margin: 0 auto; }
+
+            
+    /* 최소 1240px 에서부터 동작하는 미디어 쿼리 - 웹 pc*/
+    @media(min-width: 1240px) {
+        .box > div {float: left; width: 16.6666%;}
+        .box > div {float: left; width: 16.6666%;}
+
+    }
+
+    /* 띄어쓰기 안하면 안됨 */
+    /* 767px 에서 부터 최대 1239px 까지 동작 - 테블릿 */
+    @media(max-width: 1239px) and (min-width: 767px) {
+        .box > div {float: left; width: 25%;}
+        .box > div {float: left; width: 25%;}
+
+    }
+
+    /* 766px 이하에서 동작 - 모바일 */
+    @media(max-width: 766px) {
+        .box > div {float: left; width: 50%;}
+        .box > div {float: left; width: 50%;}
+
+    }
+
+
+/* 
+    @media(min-width: 1240px) {
+        .box > div {float: left; width: 16.6666%;}
+    }
+
+    @media(max-width: 1239px ) and (min-width: 767px) {
+        .box > div {float: left; width: 25%;}
+    }
+
+
+    @media(max-width: 766px) { 
+        .box > div {float: left; width: 50%;}
+    } */
+
+</style>
+
+
+<body>
+
+    <!-- 웹에서는 6개
+        테블릿에서 4개
+        모바일에서 2개로 보이게 하기 
+    -->
+
+    <div class="box">
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+    </div>
+
+</body>
+
+</html>

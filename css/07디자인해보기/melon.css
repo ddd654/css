@@ -96,7 +96,103 @@ padding: 9px 7px;}
     
 }
 .header .bottom .right {float: right; }
-.header .bottom .right li a {text-decoration: none; text-align: right; }
+.header .bottom .right li a {
+    text-decoration: none; 
+    text-align: right; 
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 본문 */
+
+.section .wrap {width: 1008px; margin: 0 auto;}
+
+.wrap .content {overflow: hidden;}
+.wrap .content .list_wrap{float: left; width: 480px; border: 1px solid #777;}
+.wrap .content .slide_wrap{
+    float: left; width: 236px; border: 1px solid #777;
+    margin-left: 2px;
+
+}
+.wrap .content .user_wrap{
+    float: left; width: 280px;border: 1px solid #777;
+    margin-left: 4px;
+}
+
+
+.list_wrap ul {overflow: hidden;}
+.list_wrap ul li{float: left; width: 33.3333%;}
+
+.list_wrap ul li > a {display: inline-block; position: relative;}
+.list_wrap ul li > a > .singer {position: absolute; left: 0; bottom: 4px; width: 100%; 
+    background-color: rgb(0, 0, 0, 0.7);
+    height: 25px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+.list_wrap ul li {position: relative;}
+.list_wrap ul li .hover_content {
+    position: absolute; left: 0; top: 0;
+    width: 156px;
+    height: 156px;
+    background-color: rgb(0, 0, 0, 0.7);
+
+    opacity: 0;
+
+    /* 속성, 주기-변하는 시간 , 타이밍, 딜레이 */
+    transition: opacity 0.5s ease-in-out;
+
+}
+.list_wrap ul li .hover_content a{
+    color: #fff;
+    text-decoration: none;
+    width: 156px;
+    height: 156px;
+
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* li에 hover 하면 .hover_content 투명도는 1이 된다 */
+.list_wrap ul li:hover > .hover_content{
+    opacity: 1;
+}
+
+.login_wrap {border: 1px solid #e0e0e0; 
+    background-color: #ffffff;
+    height: 115px;
+    padding: 10px;
+}
+.login_wrap .top {overflow: hidden; margin-top: 30px;}
+.login_wrap .top > .left{float: left; font-size: 12px; color: #939393;}
+.login_wrap .top > .right{float: right; font-size: 12px; color: #939393;}
+.login_wrap > button {
+    /* button design */
+    width: 100%;
+    background-color: #00d344;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    height: 35px;
+    line-height: 5px;
+
+    padding: 20px;
+    margin-top: 5px;
+
+    cursor: pointer;
+}
+
+.user_wrap > .promotion_wrap {
+    margin-top: 10px;
+}
+
 
 
 
