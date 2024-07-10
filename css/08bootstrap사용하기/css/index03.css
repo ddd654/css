@@ -1,0 +1,127 @@
+#header {
+  position: fixed;
+  z-index: 10; 
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.my-header {
+  background-color: #263238;
+  border-color: #263238;
+  border-radius: 0; 
+  margin: 0;
+}
+/* 메뉴호버 */
+.navbar-inverse .navbar-nav>li>a:hover {
+  background-color: orange;
+}
+/* 드롭다운 메뉴 active시 */
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+  background-color: red;
+}
+.my-logo {
+  padding: 5px 10px;
+}
+/* ======슬라이드===== */
+#my-slide {
+  margin-top: 52px;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+
+/* ======섹션====== */
+.prod-list {
+  border: 1px solid #e3e3e3;
+  padding: 5px;
+}
+.prod-wrap {
+  padding: 5px;
+  position: relative;
+}
+
+.prod-link {
+  border: 1px solid #e3e3e3;
+  display: block;
+  text-align: center;
+}
+
+.prod-wrap .arrow {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  background-color: #e3e3e3;
+  color:#fff;
+}
+.prod-wrap .hover {
+  opacity: 0; /* 안보임 */
+  background-color: #337ab7;
+}
+.prod-link:hover { /* a태그의 보더색 */
+  border-color:  #337ab7; 
+}
+.prod-link:hover > .arrow { /* arrow는 안보이게 */
+  opacity: 0;
+}
+.prod-link:hover > .hover {/*  hover는 보이게*/
+  opacity: 1;
+}
+
+/* 블로그 스타일 상품 디자인하기 */
+
+@media(min-width:768px) {
+  /* blog-style 클래스 중에서 col-sm-2가 있는 */
+  .blog-style.col-sm-2{
+    width: 20%;
+  }
+}
+
+.blog-inner{
+}
+.blog-inner img {
+  text-align: center;
+}
+.blog-content{
+  padding: 10px;
+}
+.blog-content > p {
+  height: 70px;
+  white-space: nowrap; /*한줄로 텍스트 처리하기*/
+  text-overflow: ellipsis; /*...으로 말줄임 표시하기*/
+  overflow: hidden; /* 3개 한세트 쓰면 효과나옴*/
+}
+
+.blog-price {overflow: hidden;}
+
+.blog-price > ul{float: left; border: 1px solid red;}
+.blog-price > strong{float: right;}
+.blog-price > ul > li {display: inline;}
+.blog-price > ul > li >i {color: yellow;}
+
+.blog-hover{
+  position:absolute;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+
+  font-size: 14px;
+  padding: 10px;
+  opacity: 0;
+}
+
+.blog-hover > a {
+  color: #fff;
+}
+
+.blog-inner:hover > .blog-hover{
+  opacity: 1;
+}
+

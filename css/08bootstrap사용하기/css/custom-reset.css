@@ -1,0 +1,51 @@
+/* 공통디자인 할것들 */
+
+/* 웹폰트 */
+
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+
+body,
+html {
+  font-family: "Gamja Flower", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+ol,
+dl,
+dd {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* input, select 태그 등은 기본값이 있는데 */
+/* 브라우저별 기본 디자인을 지우고 디자인해야한다 */
+input[type=checkbox],
+input[type=radi] {
+  appearance: none;
+
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked,
+input[type=radi]:checked {
+  outline: none;
+  background-color: greenyellow;
+
+}
