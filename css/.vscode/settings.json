@@ -1,4 +1,5 @@
 {
     "editor.tabSize": 2,
-    "editor.guides.indentation": true
+    "editor.guides.indentation": true,
+    "liveServer.settings.port": 5501
 }

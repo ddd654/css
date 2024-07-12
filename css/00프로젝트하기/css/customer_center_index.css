@@ -25,12 +25,18 @@ img {
 
 
 
-
+/* 반응형 기준값 */
 @media (min-width:1200px) {
     #change {
         width: 1170px;
 
         /* border: 1px solid red; */
+    }
+
+    /* 테이블 */
+    .board .service-board .container {
+        /* border: 1px solid green; */
+        width: 900px;
     }
 }
 
@@ -40,6 +46,12 @@ img {
         /* border: 1px solid rgb(255, 166, 0); */
 
     }
+
+    /* 테이블 */
+    .board .service-board .container {
+        /* border: 1px solid green; */
+        width: 700px;
+    }
 }
 
 @media (min-width:768px) and (max-width:991px) {
@@ -48,7 +60,14 @@ img {
         /* border: 1px solid rgb(0, 255, 191); */
 
     }
+
+    /* 테이블 */
+    .board .service-board .container {
+        /* border: 1px solid green; */
+        width: 490px;
+    }
 }
+
 
 body {}
 
@@ -59,16 +78,7 @@ body {}
 .container .row .header {}
 
 
-/* content */
-.container .row .content {}
-
-.container .row .content {
-    position: relative;
-
-
-}
-
-/* float 레이아웃 */
+/* 중앙 레이아웃 */
 #change .row {
     overflow: hidden;
 }
@@ -77,22 +87,19 @@ body {}
     /* border: 1px solid red; */
     float: left;
     width: 250px;
-
     margin-top: 40px;
 }
 
 #change .row .board {
     /* border: 1px solid blue; */
-    width: 100px;
     margin-top: 30px;
-
+    width: 500px;
 }
 
-/* 좌측 메뉴 */
 
+/* 좌측 메뉴 */
 .container .row .content li .service_menu {
     margin-top: 60px;
-
 }
 
 .container .row .content li .service_menu nav {
@@ -189,7 +196,7 @@ body {}
 /* 테이블 */
 .board .service-board .container {
     /* border: 1px solid green; */
-    width: 700px;
+    
 }
 
 .service-board .pagination {
