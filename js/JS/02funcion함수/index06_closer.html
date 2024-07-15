@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    //
+    var a = 1;
+    function x() {
+      var a = 10;
+      console.log(a); //가까운 변수가 출력된다
+
+    }
+    x();
+
+    //
+    var b = 2;
+    function y() {
+      var b = 20;
+
+    }
+    function z() {
+      console.log(b);
+    }
+
+    z();
+
+    //
+    var c = 33;
+    function param() {
+      var b = 22;
+      function z() {//렉시컬 스코프(범위), 함수 선언 위치에 따라 값이 달라진다
+        console.log(b); //이번에는 가까운 22가 나왔다
+      }
+      z();
+    }
+    param();
+
+
+    //
+    //클로저 - 함수 안에 선언되는 내부함수를 이용해 바깥에서 안쪽 지역변수를 접근할 수 있게 한다
+    function func() {
+      var a = 1;
+
+      // var x = function () {}
+
+      return function () {
+        return a;
+      }
+
+    } //a의 접근 범위가 여기서 끝난다 
+
+    var x = func();
+    console.log(typeof x);
+
+    var a = x();
+    console.log(a+"123ㅈㄷㄹㅈ"); //속에 있는 리턴으로 값에 접근한다
+
+    //--------------
+    function compute() {
+      var count = 0;
+      return ++count;
+    }
+
+    console.log(compute()); //1
+    console.log(compute()); //1
+    console.log(compute()); //1
+
+    //클로저 상황으로 만들어보기
+    function compute() {
+      var count = 0;
+      return function () {
+        return ++count;
+      }
+
+    }
+    console.log(compute()());
+    console.log(compute()());
+
+    var x = compute();
+    console.log(x());
+    console.log(x());//내부 변수 값을 기억해놓음
+    console.log(x());
+    console.log(x());
+    console.log(x());
+    console.log(x());
+
+    //
+    function obj() {
+      var name = "사과 ";
+      // return {key : value}
+
+      return {
+        getName: function () {
+          return name;
+        },
+        setName: function (aaaa) {
+          name = aaaa;
+        }
+      }
+    }
+
+console.log(obj());
+
+var obj = obj();
+obj.setName("사과123");// setter
+console.log(obj.getName());
+
+
+
+  </script>
+</body>
+
+</html>

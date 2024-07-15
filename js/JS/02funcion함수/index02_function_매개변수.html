@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //익명함수에서 매개변수
+
+    var func = function (a, b) {
+      return a + b;
+    }
+    console.log(func(11, 22));
+
+    //익명함수 만들기ex
+    var cal1 = function (x) {
+
+      if (x % 2 == 0) {
+        return "홀수";
+      } else {
+        return "짝수";
+      }
+
+    }
+    cal1(10);
+    console.log(cal1(10));
+
+    //평균 구하기ex
+    var point = function (name, q, w, e) {
+
+      return name + "님의 평균은" + (q + w + e) / 3 + "입니다"
+    }
+    console.log(point("사과", 33, 44, 55));
+
+    console.log("------------------------");
+
+    //js에서는 함수의 매개변수를 지키지 않아도 호출된다 <<
+    //그래도 지키는 것이 좋다
+    var fun = function (a, b) {
+
+      //매개변수는 arguments 객체로 전달된다
+      console.log("첫번째 매개변수"+arguments[0]);
+      console.log("두번째 매개변수"+arguments[1]);
+      console.log("세번째 매개변수"+arguments[2]);
+
+      return a + b;
+    }
+
+    console.log(fun());
+    console.log(fun(1, 2, 3, 4, 5, 6, 7, 8));
+
+
+  </script>
+
+</body>
+
+</html>

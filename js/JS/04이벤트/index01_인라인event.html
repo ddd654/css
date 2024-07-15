@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ 
+  <h3>인라인이벤트</h3>
+
+  <!-- <button type="button" onclick="순수자바스크립트코드가 들어간다"></button> -->
+  
+  <button type="button" onclick="myClick();">이벤트</button>
+
+  <h4>매개변수 주기</h4>
+  <button type="button" onclick="check('1')">이벤트1</button>
+
+  <h5>this는 태그자체를 표현, element</h5>
+  <!-- 여러 버튼 중 어떤 버튼을 눌렀는지 확인할때 this 키워드를 활용한다 -->
+  <button type="button" onclick="check(this)">이벤트2</button>
+  <button type="button" onclick="check(this)">이벤트1</button>
+  <button type="button" onclick="check(this)">태그 사이의 글자</button>
+
+  <script>
+    function myClick() {
+      var name = '사과';
+      alert(name);
+    }
+
+    function check(num){
+      console.log("check 이벤트 실행됨");
+      console.log(num);
+      console.log(num.innerHTML); //elements의 태그 사이값을 얻는다
+
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>

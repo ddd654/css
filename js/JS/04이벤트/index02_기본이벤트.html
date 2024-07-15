@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h5>기본 이벤트 사용해보기</h5>
+  <button type="button" id="btn">기본이벤트</button>
+  <button type="button" id="load">로드이벤트</button>
+
+  <script>
+    //기본 이벤트 - element를 우선 얻어서 이벤트를 건다
+    var btn = document.getElementById("btn");
+    console.log(btn);
+
+    //이벤트 대입
+    btn.onclick = function () {
+      console.log("기본 이벤트 동작");
+    }
+
+    //js의 로드 순서는 중요하다
+    var load = document.getElementById("load");
+    console.log(load);
+
+    //로드는 한화면당 한번만 사용할 수 있다
+    window.onload = function() {
+      //화면이 다 로드된 후 실행되는 이벤트
+      var load = document.getElementById("load");
+      load.onclick = function() {
+        console.log("로드 이벤트 이후에 클릭이벤트");
+
+      }
+
+
+    }
+
+  </script>
+</body>
+
+</html>

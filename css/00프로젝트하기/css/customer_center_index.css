@@ -196,15 +196,34 @@ body {}
 /* 테이블 */
 .board .service-board .container {
     /* border: 1px solid green; */
-    
+    /* box-shadow: 1px 2px 3px #555555 */
+    /* box-shadow: none | x-position y-position blur spread color | inset | initial | inherit */
+
 }
 
+/* 게시판 버튼 */
 .service-board .pagination {
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 
     margin-top: 20px;
+    font-size: 12px;
+}
+
+.service-board .pagination ul {
+    border: none;
+    width: 10px;
+
+
+}
+
+.service-board .pagination li a {
+    border: none;
+    width: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 .service-board .write-button {
@@ -216,8 +235,19 @@ body {}
     padding: 12px 0px;
 }
 
+/* 글작성 버튼 효과 */
+.service-board .write-button .write1{
+    background-color: #5fd7ff;
+    color: black;
+    border: none;
 
+}
+.service-board .write-button .write1:active {
+    background-color: #5fd7ff;
+    color: white;
+    border: none;
 
+}
 
 
 

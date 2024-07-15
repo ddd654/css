@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //JS var변수의 스코프는 function 이다
+    
+    var a= 12;
+
+    if(true){
+      var a =33;
+    }
+
+    console.log(a); //12가 아닌 33으로 덮힘
+
+    //
+    for(var i = 1; i < 10; i++){
+    }
+    console.log(i); //10이 나온다
+
+
+    function func(){
+      var a = 1000;
+    }
+    console.log(a); // 
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+
+  //위에서 호출해보기
+  func(1, 555); // 호이스팅이 가능하다
+
+  //function name(매개변수)
+  // return ~~~;
+
+  function func(a, b){
+    console.log("실행할것 func 호출");
+  
+    return a+b;
+  }
+
+  //호출하기
+  func(1, "abc")
+
+  var result = func(1,2);
+  var result = func(333,"abc");
+  console.log(result); //return이 없으면 undefined을 받는다
+
+  console.log("----------------------");
+
+  // 함수를 변수에 저장할 수 있다
+  var a = func
+  console.log(typeof a);
+
+  // 덮어 쓰는듯한 함수
+  var new1 = a(2, 3);
+  console.log(new1);
+
+  console.log("------------------------------");
+  //익명 함수
+  // function compute(){
+    
+  // }
+
+  // var x = compute;
+
+  compute(); //당겨서 사용할 수 없음
+
+  var compute = function(){
+    console.log('익명함수 호출');
+  };
+
+  compute();
+
+</script>
+
+</body>
+</html>

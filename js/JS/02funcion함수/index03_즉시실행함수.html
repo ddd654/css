@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //즉시실행 함수
+
+    (function () {
+      console.log("즉시실행함수 호출하기");
+
+      test01();
+      test02();
+
+
+    })();
+
+    (function (a, b) {
+      console.log("즉시실행함수 호출하기");
+      console.log("들어온 매개변수 실행하기>>" + a, b);
+    })("사과", 333);
+    //화면 로딩에서 실행되는 프로그램 코드를 순서대로 작성
+
+    //
+    //위에다가 추가하기, 메서드 추가하듯이
+    function test01(){
+      console.log("test01 실행하기");
+      return "test01리턴"
+    }
+
+    function test02(){
+      console.log("test01 실행하기");
+      return "test02리턴"
+    }
+
+    
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //데이터 타입과 연산자
+    var num1 = "10 ";
+    var num2 = '10';
+    var num3 = 10;
+
+    //변수에 덮어쓰기
+    num2 = 4.4;
+
+    console.log(num1 + num2 + num3); //문자열이 된다
+    console.log(num2 + num3); //숫자가 된다
+
+    var bool = true; //boolean 타입
+    var un;
+    var tag = document.querySelector("멜론");
+
+    console.log(bool); // boolean 로그 찍기
+    console.log(un); //undefined 는 초기화가 안돼있을때
+    console.log(tag); //null은 값은 지정했지만 값이 없을때 
+
+    console.log("------------------타입 확인하는 방법");
+    console.log(typeof num1);
+    console.log(typeof num2);
+    console.log(typeof bool);
+    console.log(typeof un);
+    console.log(typeof tag);
+
+    //
+    //연산자는 대부분 다 똑같은데
+    // === , !== 는 타입과 값이 같아야 true 를 리턴한다
+
+    var a = "10";
+    var b = 10;
+    console.log(a == b); //true가 나온다
+    console.log(a != b); //false가 나온다
+
+    console.log("===, !== 은 타입과 값의 정확한 비교")
+    console.log(a === b); //false가 나온다
+    console.log(a !== b); //true가 나온다
+
+
+    var c;
+    var d = null;
+    console.log(c == d); //true
+    console.log(c === d); //false
+
+
+    var arr1 = []; // 자바에서의 int[] arr = {};
+    var arr2 = [1,2,3];
+    var arr3= ["apple", 222,444,"fofo"];
+    
+    var arr4 = new Array; // 빈 배열 만들기
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
