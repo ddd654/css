@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h4></h4>
+  <section class="wrap">
+
+    <select name="" class="my-select">
+      <option value="1">봄</option>
+      <option value="2">여름</option>
+      <option value="3">가을</option>
+      <option value="4">겨울</option>
+    </select>
+
+    <img class="my-img" src="img/1.jpg" alt="사진없을때" style="width: 300px;">
+    <input type="color" class="my-color">컬러변경
+  </section>
+
+  <script>
+    var mySelect = document.querySelector(".wrap .my-select");
+    var myImg = document.querySelector(".wrap .my-img");
+    
+    mySelect.onchange = function() {
+      console.log("채인지");
+      myImg.src = "img/"+mySelect.value+".jpg"; //
+
+    }
+
+    var mySelect = document.querySelector(".wrap .my-select");
+    var myImg = document.querySelector(".wrap .my-img");
+
+    mySelect.onchange = function() {
+      console.log("채인지");
+      myImg.src = "img/"+mySelect.value+".jpg"; //
+
+    }
+
+  </script>
+</body>
+</html>

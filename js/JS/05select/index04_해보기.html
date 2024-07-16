@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h4 class="change">change</h4>
+
+  <p>태그사이에 값은 innerHTML</p>
+
+  <select class="ex-select">
+    <option value="1">사과</option>
+    <option value="2">바나나</option>
+    <option value="3">키위</option>
+    <option value="4">복숭아</option>
+  </select>
+
+
+  <script>
+    var change = document.querySelector(".change");
+    var exSelect = document.querySelector(".ex-select");
+    exSelect.onchange = function () {
+
+      console.log(exSelect.options[0].innerHTML);
+
+      change.innerHTML = exSelect.options.innerHTML;
+    }
+
+    exSelect.addEventListener('change', function () {
+      console.log(exSelect.value);
+
+      if (exSelect.value === 1) {
+        change.innerHTML = "단어를 선택하세요"
+
+      } else if (exSelect === 2) {
+        change.innerHTML = "한국"
+
+      } else if (exSelect === 2) {
+        change.innerHTML = "123"
+
+      } else if (exSelect === 2) {
+        change.innerHTML = "321"
+
+      }
+    })
+
+  </script>
+</body>
+
+</html>

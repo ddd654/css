@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  input:focus {
+    outline: none;
+  }
+</style>
+
+<body>
+
+  <pre>
+    아이디 값이 변경되면 예시처럼 구현하기
+    keyup 이벤트 사용
+    문자열길이는 length
+  </pre>
+
+  아이디:<input type="text" name="id" id="key">
+  <span class="idMsg"></span>
+
+
+  <script>
+    // var id = document.querySelector("#key");
+    var id = document.querySelector("input[name=id]");
+    var idMsg = document.querySelector(".idMsg");
+
+    // id.addEventListener("onkeyup", function() {
+    //   console.log("keyup");
+    // })
+
+    id.onkeyup = function () {
+      console.log("키업");
+      console.log(id.value.length);
+
+      if (id.value.length < 4) {
+        idMsg.innerHTML = "4미만이에요";
+        id.style.border = "2px solid red";
+
+      } else if (id.value.length >= 4) {
+        idMsg.innerHTML = "4이상이에요";
+        id.style.border = "2px solid yellowgreen";
+
+        // myImg.style.border = "3px solid" + color.value; // 여기에 넣는다
+
+      }
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

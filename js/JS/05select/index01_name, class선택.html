@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button type="button" id="btn">체크박스 앨리먼트 확인</button>
+  <input type="checkbox" name="inter" class="ck" value="1">1
+  <input type="checkbox" name="inter" class="ck" value="1">2
+  <input type="checkbox" name="inter" class="ck" value="1">3
+  <input type="checkbox" name="inter" class="ck" value="1">4
+
+  <script>
+    var btn = document.getElementById("btn")
+    console.log(btn);
+
+    var inter = document.getElementsByName("inter");
+    console.log(inter);
+
+    document.getElementById("btn");
+
+    btn.onclick = function () {
+
+      var inter = document.getElementsByName("inter");
+
+      for(var i = 0; i< inter.length; i++){
+        console.log(inter[i]);
+      }
+
+      //-------
+      var ck = document.getElementsByClassName("ck");
+      console.log(ck + " ck확인");
+
+
+    }
+
+    
+
+  </script>
+
+</body>
+
+</html>
