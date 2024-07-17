@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h4>innerHTML 문자열 형식으로 추가</h4>
+
+  <div id="inner1"></div>
+  <div id="inner2">
+    <ul>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+    </ul>
+  </div>
+
+  <div id="inner3"></div>
+
+  <button type="button" id="btn1">inner1에 추가</button>
+  <button type="button" id="btn2">inner2에 추가</button>
+
+
+  <script>
+    var inner1 = document.querySelector("#inner1");
+    var btn1 = document.querySelector("#btn1");
+
+    btn1.onclick = function () { //클릭하면
+      inner1.innerHTML = "<p><span>하나 추가하기</span></p>" //추가
+    }
+
+
+    var inner2 = document.querySelectorAll("#inner2 > ul > li");
+    var btn2 = document.querySelector("#btn2");
+
+    btn2.onclick = function () {
+
+      for (let i = 0; i < inner2.length; i++) {
+        inner2[i].innerHTML = "<p>문자열추가</p>"
+
+      }
+
+    }
+
+    // var lis = document.querySelectorAll("#inner2 > ul > li"); //배열
+    //     var btn2 = document.getElementById("btn2");
+    //     btn2.onclick = function() {
+
+    //         for(var i = 0; i < lis.length; i++) {
+    //             lis[i].innerHTML = "<p>문자열추가</p>";
+    //         }
+
+    //     }
+
+
+
+
+  </script>
+</body>
+
+</html>

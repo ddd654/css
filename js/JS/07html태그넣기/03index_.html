@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button type="button" id="btn">삭제</button>
+  <ul class="list">
+    <li>1. 사과</li>
+    <li>2. 바나나</li>
+    <li>3. 복숭아</li>
+    <li ondblclick="del(this)">4. 자두</li>
+  </ul>
+
+
+  <script>
+    //자식을 삭제 removeChild(삭제할태그)
+
+    var btn = document.querySelector("#btn");
+    var list = document.querySelector(".list");
+
+    btn.addEventListener("click", function name(params) {
+      
+      //list.removeChild();
+
+      //console.dir(list); //다양한 속성들, 사용할 속성들
+      console.log(list.children);
+      console.log(list.children[2]);
+      console.log(list.children[list.children.length -1]);
+
+      //삭제
+      list.removeChild(list.children[0]);
+
+    })
+
+    function del(a) {
+      console.log(a);
+      a.remove(); //태그자체 삭제
+    }
+  </script>
+
+
+</body>
+
+</html>
