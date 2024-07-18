@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box {
+      background-color: yellowgreen;
+      padding: 10px;
+
+    }
+
+    .box .item {
+      background-color: rgb(219, 219, 219);
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+    }
+
+    /* ---------- */
+    .container {
+      display: flex;
+
+      /* 기본값 flex-start */
+      /* justify-content: flex-start;
+      justify-content: center;
+      justify-content: space-between; 
+      justify-content: space-around;  */
+
+      /* 축방향을 세로로해서 */
+      flex-direction: column;
+      height: 300px;
+      justify-content: space-around;
+      /* 공간 속성 넣기 */
+    }
+
+    .container2 {
+      display: flex;
+      height: 100px;
+
+      /* 축을 중심으로 정렬하기 */
+      align-items: stretch;
+      align-items: flex-start;
+      align-items: end;
+      align-items: center;
+
+      /* 글자 축 중심 정렬 */
+      align-items: baseline;
+      
+    }
+
+    .container3 {
+      /* 확인하려면 너비 높이가 필요하다 */
+      display: flex;
+      width: 300px;
+      height: 300px;
+
+      flex-wrap: wrap;
+
+      /* align-content: stretch; */
+
+      align-content: flex-start;
+      align-content: space-between;
+      align-content: space-around;
+      align-content: center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <h4>justify-content 로 주축 정렬하기</h4>
+  <div class="container box">
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">world</div>
+    <div class="item">flex</div>
+  </div>
+
+  <hr>
+  <h4>축 맞춰서 정렬하기</h4>
+  <h4>align-items </h4>
+  <div class="container2 box">
+    <div class="item" style="height: 20px;">hello</div>
+    <div class="item" style="height: 40px;">world</div>
+    <div class="item" style="height: 60px;">flex</div>
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">flex</div>
+  </div>
+
+  <hr>
+  <h4>교차축 정렬 여러줄일때</h4>
+  <h4>align-content (교차축정렬 - 여러줄일때)</h4>
+  <div class="container3 box">
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">flex</div>
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">flex</div>
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">flex</div>
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">flex</div>
+  </div>
+
+
+</body>
+
+</html>

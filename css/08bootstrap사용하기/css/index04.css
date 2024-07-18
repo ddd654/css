@@ -1,0 +1,96 @@
+.join-style {
+
+  /* 박스 가운데로 밀기 */
+  margin: 0 auto;
+  float: none;
+  /* 부트스트랩에서는 float를 없애서 중앙으로 보낸다 */
+
+  padding: 10px;
+  box-shadow: 0 8px 16px rgb(0, 0, 0, 0.3);
+  /* 0 하고 px 2배px 색깔*/
+}
+
+
+.container .row .content {
+  margin-top: 30px;
+}
+
+
+/* 상품 디테일 */
+.detail-content {
+  /* 컨텐츠 높이 보정 */
+  min-height: 300px;
+}
+
+.detail-content>.title {
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+.detail-content .price {
+  font-size: 25px;
+  font-weight: 300;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px dotted gainsboro;
+  padding: 10px 0px;
+
+}
+
+.detail-content>.deliver {
+  font-size: 18px;
+  color: gray;
+}
+
+/*  */
+.detail-control>.price {
+  overflow: hidden;
+  font-size: 20px;
+  margin-top: 82px;
+}
+
+.detail-control>.price>.left {
+  float: left;
+}
+
+.detail-control>.price>.right {
+  float: right;
+
+}
+
+.detail-control>.order {
+  overflow: hidden;
+}
+
+.detail-control>.order>button {
+  float: left;
+  width: 50%;
+}
+
+/* 밑에 탭 스타일 채우기 */
+.my-tab {
+  margin-top: 40px;
+}
+
+.my-tab>li {
+  width: 25%;
+  text-align: center;
+}
+
+.my-tab>li>a {
+  border-radius: 0;
+  margin: 0;
+  color: black;
+  font-size: 24px;
+
+}
+
+.my-tab>li.active>a,
+.my-tab>li.active>a:focus,
+.my-tab>li.active>a:hover {
+  color: red;
+}
+
+.my-tab>li > a:hover{
+  border-color: greenyellow;
+}

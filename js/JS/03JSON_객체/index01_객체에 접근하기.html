@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    var person = { name: "홍길동", age: 20, arr: [1, 2, 3] };
+
+    //객체에 접근하는 첫번째 방법은 . <<
+    console.log(person);
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.arr);
+    console.log(person.arr[1] + " arr 원소 ");
+
+
+    //객체에 접근하는 두번째 방법 ["키"]
+    console.log(person["name"]);
+    console.log(person["age"]);
+    console.log(person["arr"]);
+    console.log(person["arr"][2] + " 객체에 접근하기");
+
+    console.log("--------------------------");
+    var exam = { math: 80, eng: 40, kor: 20 };
+    var hong = { name: " 자두", exam: exam };
+
+    //값에 접근하기
+    console.log(hong.exam.math);
+    console.log(hong["exam"]["math"]); //대괄호로 접근하기
+    console.log(hong["exam"].math); //혼용하기
+
+    console.log("--------------");
+
+    
+
+
+
+
+
+  </script>
+</body>
+
+</html>

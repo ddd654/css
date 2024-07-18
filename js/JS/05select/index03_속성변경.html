@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>엘리먼트 속성 변경</h4>
+
+  <select name="" id="">
+    
+  </select>
+
+  <button type="button" id="btn">체크박스 앨리먼트 확인</button>
+  <input type="checkbox" name="inter" class="ck" value="1">1
+  <input type="checkbox" name="inter" class="ck" value="1">2
+  <input type="checkbox" name="inter" class="ck" value="1">3
+  <input type="checkbox" name="inter" class="ck" value="1">4
+
+  <!-- <button type="button" id="btn1">체크박스 앨리먼트 확인</button>
+  <input type="checkbox" name="inter" class="ck" value="1">1
+  <input type="checkbox" name="inter" class="ck" value="1">2
+  <input type="checkbox" name="inter" class="ck" value="1">3
+  <input type="checkbox" name="inter" class="ck" value="1">4 -->
+
+  <hr>
+<section class="my-section">
+  <select name="" class="my-select">
+    <option value="1">봄</option>
+    <option value="2">여름</option>
+    <option value="3">가을</option>
+    <option value="4">겨울</option>
+  </select>
+
+  <button type="button" id="my-btn" >이미지 변경하기</button>
+  <img class="my-img" src="img/1.jpg" alt="" style="width: 300px;">
+</section>
+
+  <script>
+
+    var btn1 =document.querySelector("#btn");
+    console.log(btn1.id);
+    console.log(btn1.type);
+    console.log("-------");
+
+    btn1.addEventListener('click', function(){
+
+      var ck =document.querySelectorAll(".ck"); //All은 배열
+
+      // ck[3].checked = true; //4번 체크하기
+
+      for (let i = 0; i < ck.length; i++) {
+
+        ck[i].checked = true; //checked true
+        var value1 =ck[i].value; // 태그에 써놓은 value 값을 얻기
+        console.log(value1); //숫자 1
+      }
+
+    })
+
+    //-----------------------------
+    //
+    //버튼에 이벤트 넣기
+
+    var mySection = document.querySelector(".my-section");
+    var mySelect = mySection.querySelector(".my-select");
+    var myImg = document.querySelector(".my-section .my-img");
+    // document.querySelector(".my-section");
+    // document.querySelector(".my-section").querySelector(".my-select");
+
+    var myBtn = document.querySelector("#my-btn"); // << document에서의 탐색
+    myBtn.onclick = function() { //버튼 click이 일어나면
+      console.log("클릭"); //로그 찍기
+
+      //select 태그의 선택값은 value
+      //img 태그 값은 src로
+      //바꾸기 넣기
+      
+      myImg.src = "img/"+mySelect.value +".jpg"
+
+
+    }
+
+    
+
+  </script>
+</body>
+</html>

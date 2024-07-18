@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- change 이벤트 해보기 - 콘솔창에서 확인 -->
+  <select onchange="change()">
+    <option value="1">서울시</option>
+    <option value="2">경기도</option>
+    <option value="3">부산</option>
+  </select>
+
+  <hr>
+  <!-- focus, blur 이벤트 -->
+  이름 : <input type="text" id="focus">
+  
+
+  <hr>
+  <!-- mouseenter, mouseout 이벤트 -->
+  <div id="coco" style="width: 100px; height: 100px; border: 1px solid black;">
+
+  </div>
+
+  <script>
+    function change(){
+      console.log("체인지");
+    }
+
+    document.getElementById("focus").onfocus = function() {
+      console.log("focus");
+    };
+    document.getElementById("focus").onblur = function(){
+      console.log("blur");
+    }
+
+    // function mouseenter(){
+    //   console.log("마우스 엔터");
+    // }
+    // function mouseout() {
+    //   console.log("아웃");
+    // }
+
+    document.getElementById("coco").addEventListener("click", function(){
+      console.log("마우스 클릭");
+    })
+    document.getElementById("coco").addEventListener("mouseenter", function() {
+      console.log("마우스 엔터");
+    })
+    document.getElementById("coco").addEventListener("mouseout", function() {
+      console.log("마우스 아웃");
+    })
+
+
+  </script>
+
+</body>
+</html>

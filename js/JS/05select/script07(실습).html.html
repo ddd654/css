@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre>
+1. 예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 경고창을 띄우는 코드를 작성하세요.
+2. 체크된 값은 예약확인란에 출력해주세요.
+3. 힌트 - 버튼클릭시 배열에 값을 저장하고, 화면에는 문자열로 만들어 출력 합니다.😊
+</pre>
+
+    <form>
+        좌석:
+        <input type="checkbox" name="seat" value="1">1
+        <input type="checkbox" name="seat" value="2">2
+        <input type="checkbox" name="seat" value="3">3
+        <input type="checkbox" name="seat" value="4">4
+        <input type="checkbox" name="seat" value="5">5
+        <input type="checkbox" name="seat" value="6">6
+        <input type="checkbox" name="seat" value="7">7
+        <input type="checkbox" name="seat" value="8">8
+        <input type="checkbox" name="seat" value="9">9
+        <input type="checkbox" name="seat" value="10">10
+
+        <br>
+        <button type="button" id="btn">예약</button>
+
+        <br>
+        예약번호:<div id="result"></div>
+
+
+    </form>
+
+    <script>
+        // var seat = document.getElementsByName("seat"); 배열이다
+        var seat = document.querySelectorAll("input[name=seat]");
+        var btn = document.querySelector("#btn");
+        var result = document.querySelector("#result");
+
+        btn.onclick = function() {
+            //
+            var arr = new Array(); //빈배열 만들기
+
+            for (var i = 0; i < seat.length; i++) {
+                if(seat[i].checked){
+                    arr.push(seat[i].value);
+
+                }
+            }
+
+            if(arr.length== 0){
+                alert("좌선을 1개이상 선택하세요")
+            } else {
+                var str ="";
+                for(var i = 0; i < arr.length; i++){
+                    str += arr[i] + "번";
+                }
+                result.innerHTML = str;
+            }
+            console.log(arr);
+
+        }
+
+
+        // var seat = document.querySelectorAll("input[name=seat]"); //배열
+        // var btn = document.getElementById("btn");
+        // var result = document.getElementById("result");
+
+        // btn.onclick = function() {
+        //     //seat태그들 에서 checked되어 있는 속성만 배열에 추가
+        //     var arr = new Array(); //빈배열          
+
+        //     for(var i = 0; i < seat.length; i++) {
+        //         if(seat[i].checked) {
+        //             arr.push(seat[i].value); //체크되어있는 태그의 value
+        //         }
+        //     }
+
+        //     if(arr.length == 0) {
+        //         alert("좌석 체크는 1개 이상 선택하세요");
+        //     } else {
+        //         var str = "";
+        //         for(var i = 0; i < arr.length; i++) {
+        //             str += arr[i] + "번 "
+        //         }
+        //         result.innerHTML = str; //문자열 삽입
+
+        //     }
+
+        // }
+
+
+        // //좌석 체크했을때 
+        // //값 바꾸기
+        // seat.onclick = function () {
+        //     console.log("seat 선택");
+        //     if (seat.type === "checkbox")
+        //         seat.type == "checked";
+        // }
+
+        // //btn 예약을 클릭했을때
+        // btn.onclick = function () {
+        //     if (seat.type !== "checked") {
+        //         alert("체크된것이 없을때")
+
+        //     } else if (seat.type === "checkbox") {
+        //         console.log("체크있음");
+        //         result.innerHTML = "체크번호넣기";
+        //     }
+        // }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

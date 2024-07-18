@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h4></h4>
+
+  <input type="text" class="todo" placeholder="내용을 작성하세요">
+  <button type="button" id="add">추가하기</button>
+
+  <ul class="list">
+
+  </ul>
+
+  <script>
+    var add = document.getElementById("add"); //버튼
+    var todo = document.querySelector(".todo"); //인풋
+    var list = document.querySelector(".list"); //ul
+    var count = 1;
+
+    add.addEventListener("click", function () {
+
+
+      //태그만들기
+      // document.createElement("section")
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+
+      a.href = "#"; //a 태그에 속성 추가하기
+      a.innerHTML = count + ", " + todo.value; // 사용자가 입력한 값 a에넣기
+
+      // console.log("a");
+
+      li.appendChild(a); //li 리스트에 a 넣기
+      console.log(li);
+
+      list.appendChild(li);
+      console.log(list);
+
+      count++; // 리스트 옆에 숫자 넣기
+      todo.value = ""; // 사용자 인풋창값 초기화
+
+    })
+
+  </script>
+
+</body>
+
+</html>

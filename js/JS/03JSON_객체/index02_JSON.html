@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //나중에 원격에 있는 어떤 데이터를 읽거나, 보낼때 문자열 형식이여야 한다
+    var date = [
+      { id: "aaa123", title: "java" }, //배열 안에 객체들 {}
+      { id: "사과", title: "jsp" },
+      { id: "바나나", title: "js" }
+
+      //배열 안의 객체를 문자열로 바꿔야 한다'
+      //JSON.stringify() <<<
+
+    ]
+
+    var json = JSON.stringify(date);
+    console.log(json);
+
+    // 이제 문자열을 객체, 배열 변환으로 바꿔준다
+    //JSON.parse()
+
+    var obj = JSON.parse(json);
+    console.log(obj);
+    
+    //
+    // key, value가 반드시 "" 쌍따옴표로 감싸져야 한다
+    // var x = '{name: "복숭아", age: 키위}';
+    var x = '{"name": "복숭아", "age": "키위"}';
+    var result = JSON.parse(x);
+
+    console.log(result);
+
+  </script>
+
+
+</body>
+
+</html>

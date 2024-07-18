@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h4>querySelector</h4>
+  <button type="button" id="btn">쿼리셀렉터</button>
+
+  <div class="box">
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>복숭아</li>
+      <li>자두</li>
+    </ul>
+  </div>
+
+  <script>
+    var btn = document.querySelector("#btn");
+    console.log(btn);
+
+    document.querySelector("#btn").addEventListener("click", function () {
+
+      //li 태그를 querySelector로
+      var li = document.querySelector(".box > ul > li") // ~~ 안에 있는
+      console.log(li); // 처음 발견되는 1개 값만 가져온다
+
+      var li2 = document.querySelectorAll(".box > ul > li");
+      console.log(li2);
+
+      for (var i = 0; i < li2.length; i++) {
+        console.log(li2[i]); // li 엘리먼트에 순차적으로 접근
+      }
+
+
+
+    })
+
+  </script>
+
+</body>
+
+</html>

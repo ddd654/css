@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 부트스트랩 css링크 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- 제이쿼리(부스트랩보다 먼저 링크) -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- 부트스트랩 js링크 -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- 커스터마이징 한 css 디자인 추가 -->
+  <link rel="stylesheet" href="css/custom-reset.css">
+  <link rel="stylesheet" href="css/index04.css">
+  <link rel="stylesheet" href="css/index03.css">
+
+
+</head>
+
+<body>
+
+  <!-- 윗메뉴 -->
+  <header id="header">
+    <nav class="navbar navbar-inverse my-header">
+      <div class="container"><!-- step1 -->
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand my-logo" href="#">
+            <img src="img/logo.svg" alt="로고" width="40">
+          </a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li class="dropdown"><!-- step2 -->
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">메뉴1<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1-1</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- 
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>회원가입</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>로그인</a></li>
+                    -->
+            <li class="dropdown"><!-- step3 -->
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원가입<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>회원가입</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>로그인</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!-- 중간에 로그인 화면 -->
+  <section style="margin-top: 52px; ">
+    <div class="container">
+
+      <h3>로그인</h3>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-xs-10 join-style">
+
+          <!-- 로그인 화면 -->
+          <div class="form-group">
+            <label for="usr">이름:</label>
+            <input type="text" class="form-control" id="usr">
+          </div>
+          <div class="form-group">
+            <label for="pwd">비밀번호:</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>
+
+          <!-- 버튼 달린 박스 -->
+          <div class="form-group">
+            <label for="auth">본인 인증</label>
+
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="본인인증" id="auth">
+              <div class="input-group-btn">
+                <button class="btn btn-primary" type="submit">본인인증</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- radio 버튼 -->
+          <label for="">123</label>
+          <div class="form-group">
+            <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+          </div>
+
+          <button type="button" class="btn btn-info">login</button>
+          <button type="button" class="btn btn-default">login</button>
+          <button type="button" class="btn btn-primary">login</button>
+          
+          <button type="button" class="btn btn-primary btn-block">login</button>
+          <button type="button" class="btn btn-default btn-block">login</button>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- 로그인 밑에거 -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xs-12 content">
+          <img src="img/detail.jpg" alt="상품상세">
+        </div>
+        <div class="col-md-6 col-xs-12 content">
+          <div class="detail-content">
+            <p class="title">과일</p>
+            <p class="price">사과</p>
+            <p class="deliver">바나나</p>
+            <p>
+              파인애플<br>
+              키위 | 수박 | 복숭아 | 체리
+            </p>
+          </div>
+
+          <div class="detail-control">
+            <div class="price">
+              <p class="left">총 상품금액</p>
+              <p class="right">0원</p>
+            </div>
+            <div class="order">
+              <button type="button" class="btn btn-primary">장바구니</button>
+              <button type="button" class="btn btn-default">구매하기</button>
+
+            </div>
+          </div>
+
+          
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 댓글 부분 -->
+    <section>
+      <!-- 부트스트랩에서 끌어올때 영역 잡고서 넣기 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <!-- 다이나믹 탭 -->
+            <ul class="nav nav-tabs my-tab">
+              <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+              <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+              <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+              <li><a data-toggle="tab" href="#menu3">Menu 3번</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Some content.</p>
+              </div>
+              <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Some content in menu 1.</p>
+              </div>
+              <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+              <div id="menu3" class="tab-pane fade">
+                <h3>네번째 탭</h3>
+                <p>Some content in menu 3.</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+</body>
+
+</html>

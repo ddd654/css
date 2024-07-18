@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="num" type="number" value="0" readonly>
+  <button id="up">증가</button>
+  <button id="down">감소</button>
+
+  <script>
+    var num = document.querySelector(("#num"));
+
+    var up = document.querySelector("#up");
+    var down = document.querySelector("#down");
+
+    up.onclick =function(){
+      num.value++;
+    }
+    down.onclick =function(){
+
+      if(num.value == 0){
+        alert("0 미만 불가")
+        return;
+      }
+      num.value--;
+
+    }
+
+  </script>
+
+</body>
+
+</html>

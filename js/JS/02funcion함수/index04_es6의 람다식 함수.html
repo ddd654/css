@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //ES6 JS함수
+
+
+    // var func1 = function (a, b) {
+    //   return a + b;
+    // }
+
+    // a+b 를 리턴한다는 뜻, 코드 한줄이면 {} 없애서 return 됨
+    var func1 = (a, b) => a + b;
+
+
+    //
+    // var func2 = function (a, b) {
+    //   var sum = 0;
+    //   for (var i = 0; i <= b; i++) {
+    //     sum += i;
+    //   }
+    //   return sum;
+    // }
+    //바꾸기
+    // 코드가 여러줄이면, 중괄호를 그냥 쓰면 됨
+    var func2 = (a, b) => {
+      //똑같은 내용 코드
+      var sum = 0;
+      for (var i = 0; i <= b; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+
+    //
+    var func3 = function (a) {
+      console.log("매개변수" + a);
+    }
+    //바꾸기
+    var func3 = a => console.log("매개변수" + a);
+
+    console.log(func1(1, 2));
+    console.log(func2(10, 22));
+    console.log(func3(5));
+
+
+
+  </script>
+</body>
+
+</html>

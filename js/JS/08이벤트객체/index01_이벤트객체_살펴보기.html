@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul class="box">
+    <li>1. 사과</li>
+    <li>2. 바나나</li>
+    <li>3. 체리</li>
+    <li>4. 복숭아</li>
+    <li>5. 멜론</li>
+  </ul>
+
+  <p class="result"></p>
+
+  <script>
+    //li모두 얻기
+    var list = document.querySelectorAll(".box > li");
+    var result = document.querySelectorAll(".result");
+
+    console.log(list);
+
+    for (var i = 0; i < list.length; i++) {
+      list[i].onclick = function (e) { //
+        console.log("li 클릭");
+
+        //result.innerHTML = list[i].innerHTML;  // 이렇게 안된다
+
+        // result.innerHTML = this.innerHTML;
+        // console.log(result.innerHTML);
+
+        result.innerHTML = e.target.innerHTML; //괄호안에 이벤트 객체 넣어서 타겟
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>

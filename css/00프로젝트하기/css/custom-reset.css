@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
+
 body,
 html {
   font-family: "Gamja Flower", sans-serif;
@@ -29,25 +30,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/* 부트스트랩의 기본 인풋디자인 변경하기 */
-.form-control {border-radius: 0;}
-.form-control:focus{border-color: black;
-  box-shadow: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* input, select 태그 등은 기본값이 있는데 */
 /* 브라우저별 기본 디자인을 지우고 디자인해야한다 */
