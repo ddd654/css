@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul class="box">
+    <li>1. 사과</li>
+    <li>2. 바나나</li>
+    <li>3. 체리</li>
+    <li>4. 복숭아</li>
+    <li>5. 멜론</li>
+  </ul>
+
+  <p class="result"></p>
+
+  <script>
+    // 윗 태그에 부모태그에 이벤트 > 자식들에게 이벤트 위임됨
+    var box = document.querySelector(".box"); //li의 부모 box
+    var result = document.querySelector(".result");
+
+    box.onclick = function() { //클릭하면
+      console.log("li까지 이벤트 걸림");
+
+      // console.log(event);
+      // 이벤트 로그 실행해서 나온 타겟
+      console.log(event.target); //이벤트가 동작한 태그 > li
+      console.log(event.currentTarget); //이벤트가 걸려있는 태그 > ul
+
+      console.log(event.target.innerHTML);
+      result.innerHTML = event.target.innerHTML; //result 클래스 태그안에 li 값넣기
+      result.innerHTML = event.currentTarget.innerHTML; //result 클래스 태그안에 ui 값넣기
+
+
+      console.dir(event.target);
+      if (event.target.tagName == "UL") {
+        return; //UL이면 종료한다
+      }
+      result.innerHTML = event.currentTarget.innerHTML;
+
+
+      //e.target~~~  괄호안에 e 넣어서 사용할 수 이씀
+    }
+
+  </script>
+
+</body>
+
+</html>
