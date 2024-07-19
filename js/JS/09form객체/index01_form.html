@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="list.board" name="myForm">
+    이름 : <input type="text" name="name" pattern="">
+    분야 : 
+    <input type="checkbox" name="info" value="js">js
+    <input type="checkbox" name="info" value="html">html
+    <input type="checkbox" name="info" value="css">css
+
+    <input type="submit" value="보내기" id="btn">
+  </form>
+  <script>
+    //form 태그는 document의 자식으로 document.form이름.input이름 으로 접근 가능
+    // = querySelector 안쓰고 가능
+
+    var btn = document.getElementById("btn");
+    btn.onclick = function() {
+      
+      //1. submit 버튼 보내는거 중단
+      event.preventDefault();
+
+      //2
+      // console.log(document.myForm);
+      // console.log("값 접근하기", document.myForm.name, 123);
+      // console.log(document.myForm.info);
+
+      //3
+      var myForm =document.myForm;
+      if(myForm.name.value.length < 4){
+        alert("4글자 이상입니다");
+        myForm.name.focus(); // input태그에 focus 포커싱
+        return; // << 함수종료
+      }
+
+    }
+
+  </script>
+</body>
+</html>

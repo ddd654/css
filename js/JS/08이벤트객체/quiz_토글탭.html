@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .toggle li {
+        display: inline-block;
+        padding: 15px 20px 14px;
+        width: 25%;
+        text-align: center;
+        border: 1px solid #333;
+        cursor: pointer;
+    }
+
+    .toggle-menu {
+        display: none;
+        
+    }
+
+    .active {
+        display: block;
+        animation: name duration timing-function delay iteration-count direction fill-mode;     
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: -100px;
+        } to {
+            opacity: 1;
+            color: aqua;
+            margin-left: 0px;
+        }
+    }
+
+</style>
+
+<body>
+    <!--
+    태그의 data-xx는 태그에 필요한 중요한 데이터를 저장하는 곳
+    data- 로 시작하고 이름을 지어 사용합니다.
+    -->
+    <section>
+        <ul class="toggle">
+            <li data-id="#toggle1">메뉴1</li>
+            <li data-id="#toggle2">메뉴2</li>
+            <li data-id="#toggle3">메뉴3</li>
+        </ul>
+
+        <div class="toggle-wrap">
+            <div class="toggle-menu active" id="toggle1">
+                토글메뉴1
+            </div>
+            <div class="toggle-menu" id="toggle2">
+                토글메뉴2
+            </div>
+            <div class="toggle-menu" id="toggle3">
+                토글메뉴3
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script>
+        //1. ul에 이벤트 위임으로 클릭이벤트, 클릭된 타겟의 data-id을 얻음
+        // 2. toggle-wrap 클래스 아래에 있는 active속성을 삭제
+        //3. data-id의 값에 알맞는 태그에 active속성을 추가하면 됩니다.
+
+        // var toggle = document.querySelector(".toggle");
+        // var toggleWrap = document.querySelector(".toggle-wrap");
+        // var toggleMenus = document.querySelectorAll(".toggle-menu");
+
+        // console.log(toggleMenus[0].classList);
+
+        // //클릭하면
+        // toggle.onclick = function () {
+
+        //     //console.log(event.target.dataset.id);
+
+        //     var dataId = event.target.dataset.id; //#토글1, 2, 3
+
+        //     //console.log(event.target.tagName);
+
+        //     if (event.target.tagName == "LI") { // 태그이름이 li 이면                
+
+        //         for (var i = 0; i < toggleMenus.length; i++) {
+        //             if(toggleMenus[i].classList == "toggle-menu"){
+        //                 toggleMenus[i].classList.add('active');
+
+        //             } else {
+        //                 toggleMenus[i].classList.remove('active');
+
+        //             }
+        //         }
+        //     }
+        // }
+
+        var toggle = document.querySelector(".toggle");
+        toggle.addEventListener("click", function name(params) {
+            if (event.target.tagName != "LI") return; //LI가 아니면 리턴
+
+            var value = event.target.dataset.id; //
+            console.log(value);
+
+            var active = document.querySelector(".toggle-menu.active");
+            active.classList.remove("active");
+
+            var tag = document.querySelector(value); // 클릭한 대상에 연결되는 태그
+            tag.classList.add("active");
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+        // var toggle = document.querySelector(".toggle");
+        // var toggleWrap = document.querySelector(".toggle-wrap");
+        // var toggleMenus = toggleWrap.querySelectorAll('.toggle-menu');
+
+        // toggle.onclick = function (event) {
+        //   if (event.target.tagName === 'LI') {
+        //     var dataId = event.target.dataset.id;
+
+        //     toggleMenus.forEach(function (menu) {
+        //       menu.classList.remove('active');
+        //     });
+
+        //     var targetMenu = document.querySelector(dataId);
+        //     if (targetMenu) {
+        //       targetMenu.classList.add('active');
+        //     }
+        //   }
+        // };
+
+
+
+    </script>
+</body>
+
+</html>
