@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h4>메인화면</h4>
+
+  <!-- 
+      1. ~열지않기 창을 종료하면 개발자가 알 수 있는 쿠키 만들기
+      2.메인창에 해당쿠키가 있으면, 팝업 열지 않기
+      3. 시간은 +!
+       -->
+
+
+  <script>
+    //새창 window.open()
+    //창닫기 window.close()
+
+    window.onload = function name(params) {
+      //window.open("https://www.naver.com");
+      // window.open("popup.html")
+
+      
+
+      //팝업창 만들기
+      // window.open("popup.html", "메인팝업창", "width=300, height=300, top=400, left=400, location=no")
+      //location은 크롬에서 주소창이 안없어진다 = modal창 사용하기
+
+      if(findCookie("mainPopup") == false){
+        window.open("popup.html", "메인팝업창", "width=300, height=300, top=400, left=400, location=no")
+
+      }
+
+    }
+
+    //쿠키 확인하기 함수
+    function findCookie(name) {
+      var cookies = document.cookie;
+
+      var arr = cookies.split("; ");
+
+      //각자 짜야되는 코드
+      for(var i in arr) {
+        if(arr[i].indexOf(name + "=") != -1){
+          return true; //값이 있다
+        }
+      }
+
+      return false;
+    }
+
+    //----------------------
+
+    // //쿠키만들기
+    // var createCookie = document.getElementById("createCookie");
+    // createCookie.onclick = function () {
+    //   console.log("쿠키만들기 클릭");
+
+    //   var date = new Date();
+
+    //   var cookie = "";
+    //   cookie += "name=자두;expires=" + date.toUTCString();
+    //   console.log("저장된 쿠키보기", cookie);
+
+    //   document.cookie = cookie;
+    // }
+
+    // //쿠키얻기
+    // var findCookie = document.getElementById("findCookie");
+    // findCookie.onclick = function () {
+
+    //   var cookies = document.cookie;
+
+    //   var arr = cookies.split("; ");
+
+    //   for(var i in arr){
+    //     console.log(arr[i]);
+
+    //     if(cookies[i].indexOf("name=") != -1){
+    //       var value = cookies[i].replace("name=","");
+    //       return;
+
+    //     }
+    //   }
+    // //메인창에서 팝업열기, 쿠키있으면 안열리게
+    // window.onload = function () {
+
+    //   if (cookies) {
+
+    //     console.log("쿠키있을때");
+    //   } else {
+    //     window.open("popup.html", "팝업창", "width=400px, height= 400px, left=300, top=300");
+    //   }
+
+    // }
+
+
+    // }
+  </script>
+
+
+  <script>
+   
+
+  </script>
+
+</body>
+
+</html>
