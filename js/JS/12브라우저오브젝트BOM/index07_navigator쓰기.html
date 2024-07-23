@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="a">
+    사과
+  </div>
+
+  <script>
+    console.log(navigator);
+    console.log("사용자의 접속환경 \n", navigator.userAgent);
+
+    var head = document.querySelector("head");
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+
+    if(navigator.userAgent.includes("Mobile")){//Moblie 문자열이 포함되어 있으면
+      //확인하기
+      console.log("사용자가 모바일로 접속했다");
+
+      // location.href = "https://m.naver.com";
+
+      link.href = "mobile.css";
+
+
+    } else if(navigator.userAgent.includes("Edg")){ //edge로 접속하면
+      console.log("엣지");
+      // location.href = "https://www.naver.com";
+      link.href = "chrome.css"
+
+
+    } else if(navigator.userAgent.includes("Chrome")){// 크롬으로 접속함
+      console.log("크롬");
+      // location.href = "https://www.naver.com";
+      link.href = "chrome.css"
+
+
+    }
+
+    head.appendChild(link);
+
+
+  </script>
+
+
+</body>
+</html>

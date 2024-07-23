@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button type="button" id="stopBtn">중지버튼</button>
+  <script>
+
+    // window.alert("window는 생략할 수 있음");
+    // confirm("window.생략하기");
+
+    var a = 12; // 멤버변수도 window 객체 안에 저장된다
+    console.log(window.a); //window는 생략되었던 것이다
+
+    // var stopId =setInterval(timeFunc, 1000);
+    // //소괄호는 리턴받겠다는 뜻이다 = 함수안에 리턴 넣어서 받아야함
+    // function timeFunc(){
+    //   console.log(1);
+    // }
+
+    var stopId = setInterval(function () {
+      console.log(1);
+    }, 1000)
+
+    var stopBtn = document.getElementById("stopBtn");
+
+    stopBtn.onclick = function () {
+      clearInterval(stopId); // 해당 인터벌 중지
+      clearTimeout(stopId2)
+    }
+
+
+    //-----------------------
+    //타임 아웃
+    //일정시간 뒤에 1번 실행
+    var stopId2 = setTimeout(function () {
+      console.log("setTimeout 3초뒤 실행");
+    }, 3000);
+
+
+
+
+  </script>
+
+</body>
+
+</html>
