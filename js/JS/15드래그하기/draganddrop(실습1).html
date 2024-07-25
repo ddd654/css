@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 900px;
+        }
+
+        .list li {
+            border: 1px solid #777;
+            flex: 0 0 180px;
+            height: 280px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <h2>움직여봐</h2>
+        <h2>1. dropzone은 이벤트 위임방식으로 처리되면 만점!</h2>
+
+        <ul class="list">
+            <li class="box">
+                <img src="https://tcpschool.com/examples/images/img_monalisa.png" alt="이미지" draggable="true">
+            </li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+        </ul>
+    </div>
+
+
+    <div class="container" style="width: 100px; height: 100px; border: 1px solid red;">여기</div>
+
+    <script>
+
+
+        var img = document.querySelector('.box > img');
+        var list = document.querySelector(".list");
+        var container = document.querySelector(".container");
+
+        list.addEventListener("dragover", function(){
+            event.preventDefault();
+        })
+
+        list.addEventListener("drop", function() {
+            //list.appendChild(img);
+
+            //li의 자식
+            event.target.appendChild(img);
+        })
+
+        container.addEventListener("drop", function() {
+            container.appendChild(img);
+            console.log("드랍 이벤트");
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var img = document.querySelector('.list img[draggable="true"]');
+
+        // list.addEventListener("dragover", function () {
+        //     event.preventDefault();//파일 드롭시 브라우저가 파일을 열려고 하는 이벤트 중단
+        // })
+
+        // list.addEventListener("drop", function () {
+        //     event.preventDefault();
+
+        //     //li가 아니면 이벤트중단
+        //     if (event.target.tagName != "LI") {
+        //         return;
+        //     }
+
+        //     //이미지를 li의 자식으로
+        //     event.target.appendChild(img);
+        // })
+
+
+        // var container = document.querySelector(".container");
+        // container.addEventListener("dragover", function () {
+        //     event.preventDefault(); //기본 이벤트 중단 // 드랍 이벤트 안되서 막음
+        //     //태그나 파일을 드롭할때 브라우저가 자동으로 open하려는 기본이벤트가 있었다 << 이걸 중단
+
+
+
+        //     console.log("드래그 요소가 영역안에 머무르고 있을때 실행되는 dragover");
+        // })
+
+        // container.addEventListener("dragleave", function () {
+        //     console.log("드래그 대상이 떠날때 실행되는 dragleave");
+        // })
+
+        // container.addEventListener("drop", function () {
+        //     console.log("드래그 대상을 drop할때의 이벤트");
+
+        //     //드롭하면 이 위치로 옮기겠다
+        //     container.appendChild(img);
+        // })
+
+    </script>
+
+
+
+</body>
+
+</html>

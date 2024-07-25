@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container {
+      width: 300px;
+      height: 300px;
+      border: 3px dotted greenyellow;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <p class="title">파일 올리는곳</p>
+  </div>
+
+
+  <script>
+    var container = document.querySelector(".container");
+
+    container.addEventListener("dragover", function () {
+      event.preventDefault();
+
+    })
+    container.addEventListener("drop", function () {
+      event.preventDefault();
+
+      //console.dir(event);
+
+      //event.dataTransfer 속성은 드래그된 파일 정보를 확인
+      console.log(event.dataTransfer.files);
+      console.log(event.dataTransfer.files[0]); //파일 정보, 나중에 공부할듯, 서버로 보내야한다
+      
+      var fileName = event.dataTransfer.files[0].name; //파일 이름
+
+      var p = document.createElement("p");
+      p.innerHTML = fileName;
+      
+      event.target.appendChild(p); //파일이름을 웹에 찍어준다
+      
+
+
+    })
+  </script>
+
+</body>
+
+</html>
