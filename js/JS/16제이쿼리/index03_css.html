@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  
+  <ul class="test1">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+  </ul>
+
+  <div class="box">box</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+
+
+  <script>
+    //js로 li태그 style전부 변경하기
+    var arr = document.querySelectorAll(".test1 > li");
+
+    for(var i = 0; i < arr.length; i++){ //배열이니 반복
+      arr[i].style.backgroundColor = "red";
+    }
+
+    //제이쿼리로  css 바꾸기 - 단일, 다중 전부 편하게 바꿔준다
+    $(".test1 > li").css("backgroundColor", "yellow");
+
+
+
+    //css값 얻기
+    var result = $(".test1 > li").css("backgroundColor");
+    console.log(result);
+
+    $(".box").css({
+      "backgroundColor" : "yellow",
+      "width" : "50px",
+      height : "50px",
+      border : "1px dotted black",
+      display : "inline-block"
+    })
+
+  </script>
+
+</body>
+</html>

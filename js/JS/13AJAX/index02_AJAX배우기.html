@@ -96,7 +96,7 @@
     .then(function(response){
       return response.json();
     })
-    .then(function(data) { //response 뭐뭐 대신
+    .then(function(data) { //response  대신
       return data;
     })
     .then(function(data) {
@@ -104,7 +104,7 @@
       
     })
     .then(function(data) {
-      console.log(data); //이렇게 데이터를 받을수 있다
+      console.log(123, data); //이렇게 데이터를 받을수 있다
     })
     .catch(function (e) { // 에러나면 나오게 하기
       console.log(e); 

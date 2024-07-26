@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+  <button type="button" id="btn" class="btn btn-default">클래스 조작 테스트</button>
+
+  <script>
+    //js로 하기
+    var btn = document.getElementById("btn");
+    btn.classList.add("클래스추가");
+    btn.classList.remove("클래스삭제");
+
+
+    //제이쿼리로 하기
+    $("#btn").addClass("myBtn"); // 클래스 이름 뒤에 추가하기
+    $("#btn").removeClass("btn"); //삭제
+
+    console.log($("#btn").addClass("btn")); //btn이 포함되있으면 true, 없으면false
+
+
+  </script>
+
+
+  <h4>토글</h4>
+  <button type="button" id="tog" class="dark">dark</button>
+
+  <script>
+    $("#tog").click(function () {
+      console.log("제이쿼리 클릭");
+    })
+
+    $("#tog").click(function () {
+      console.log(this);
+      console.log(event.target);
+
+      $(this)
+      $(event.target).toggleClass("dark") // 클래스 토글해주기
+    })
+
+
+
+  </script>
+
+
+  <button id="test" type="button" class="test aaa">사과</button>
+
+  <script>
+    //test 버튼에 aaa가 있으면 body배경을 바꾸고
+    //test 버튼에 aaa가 없으면 body를 흰색
+    //hasclass, addClass, removeClass 이용
+
+    // $("#test").click(function () {
+    //   console.log("클릭 이벤트");
+
+    //   if ($("#test").hasClass("aaa")) {
+
+    //     $("body").css({"backgroundColor": "yellow"})
+
+    //     $("#test").removeClass("aaa");
+
+    //   } else {
+
+    //     $("body").css({"backgroundColor": "white" })
+
+    //   }
+
+    // })
+
+    $("#test").click(function () {
+
+      if ($(event.target).hasClass("aaa")){
+        $(document.body).css("background", "green");
+
+      } else {
+        $(document.body).css("background", "white");
+
+
+      }
+      
+      $(event.target).toggleClass("aaa");
+
+    })
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
