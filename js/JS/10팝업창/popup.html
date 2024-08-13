@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h4>팝업창</h4>
+
+  <!-- <button type="button" id="closeBtn">x</button> -->
+
+  <input type="checkbox" id="check" onclick="popup('mainPopup')">오늘하루 이창을 열지않기
+
+  <script>
+    function popup(name) {
+      
+      //쿠키만들기
+      var date = new Date();
+      date.setDate(date.getDate() +1);
+      date.setHours(0);
+      date.setMinutes(0);
+      date.setSeconds(0);
+      //위에 자정 맞추기 
+
+      //쿠키문자열
+      var str = name + "=true;expires=" + date.toUTCString() +";";
+      document.cookie = str;
+
+      console.log(str);
+
+
+      //팝업 종료
+      window.close();
+    }
+
+  </script>
+
+
+
+
+  <script>
+    // //window.close();
+    // window.close(); // 현재 창닫기
+
+    // var closeBtn = document.getElementById("closeBtn");
+    // closeBtn.onclick = function(){
+    //   //window.close(); // 현재 창닫기
+
+    // }
+
+    //---------------------------------
+
+
+
+    //var checkbox = document.getElementById("check");
+
+    //팝업창 체크박스가 체크되면 close(); 되게
+    // checkbox.onclick = function () {
+    //   console.log("체크박스 클릭");
+
+
+
+    //   window.close();
+
+    // }
+    
+
+
+  </script>
+
+</body>
+
+</html>

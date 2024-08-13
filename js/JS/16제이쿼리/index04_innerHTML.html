@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+  <div class="test1"></div>
+  <div class="test2"></div>
+
+  <script>
+    //js로 태그넣기
+    document.querySelector(".test1").innerHTML = "<a href='#'> 태그넣<a/>";
+
+
+    //제이쿼리로 태그넣기
+    $(".test2").html("<a href='#'> 제이쿼리 태그 <a/>");
+
+
+    //innerHTML 값 얻기
+    var a = $(".test1").html()
+    console.log(a);
+
+    //순수text 형태로 값 넣기
+    $(".test2").text("<a href='#'> 문자열로 넣기 <a/>");
+      
+  </script>
+
+</body>
+
+</html>

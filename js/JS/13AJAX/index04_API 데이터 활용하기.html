@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  68624b5066796f70383449416a4357
+  4e764b476c796f703538514f5a5051
+  7250514f63796f7036336a4b784b51   
+
+  <script>
+
+    //로그에 CORS 나오면, 서버에서 거부한 것이다
+    var key = "7250514f63796f7036336a4b784b51";
+    
+    fetch("http://openapi.seoul.go.kr:8088/7250514f63796f7036336a4b784b51/json/bikeList/1/5/")
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(data) {
+      console.log(data);
+      //..........
+    })
+
+  </script>
+
+</body>
+</html>

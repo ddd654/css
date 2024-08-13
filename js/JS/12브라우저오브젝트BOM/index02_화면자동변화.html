@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .my-img {
+      animation: name duration timing-function delay iteration-count direction fill-mode;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+
+      }
+    }
+
+    .wrap-slide{ position: relative;}
+    .wrap-slide > .stop-btn {
+      position: absolute;
+      left: 50%;
+      bottom: 50px;
+      background-color: black;
+
+      color: #fff;
+      width: 50px;
+      height: 50px;
+
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+<div class="wrap-slide">
+
+  <div class="my-slide">
+    <img src="img/slide1.jpg" class="my-img" alt="">
+    1
+  </div>
+  
+  <div class="stop-btn stop" id="stop-btn">
+    멈춰
+  </div>
+</div>
+
+  <script>
+
+    var mySlide = document.querySelector(".my-slide");
+
+    var num = 1;
+    function changeImg() {
+      var img = document.createElement("img");
+      img.src = "img/slide" + num++ + ".jpg";
+      img.classList.add("my-img");
+
+      // console.log(img);
+      mySlide.appendChild(img); //하나 추가
+      mySlide.removeChild(mySlide.firstElementChild); //첫번째 자식 삭제
+
+      //원하는 시점에서 초기화하기
+      if (num == 4) {
+        num = 1;
+      }
+    }
+
+    var stopId;
+    //즉시실행 함수
+    (function () {
+      stopId = setInterval(changeImg, 4000);
+    })();
+
+    //------
+    //일시정지, 재개
+    var stopBtn = document.getElementById("stop-btn");
+    stopBtn.onclick = function () {
+      if(stopBtn.classList.contains("stop")){
+        //stop 클래스가 있으면 멈춘다
+        clearInterval(stopId);
+        stopBtn.innerHTML = "재개";
+      } else {
+        //없으면 재개
+        stopId = setInterval(changeImg, 4000);
+        stopBtn.innerHTML = "시작";
+
+      }
+      
+
+      stopBtn.classList.toggle("stop");
+    }
+
+
+  </script>
+</body>
+
+</html>

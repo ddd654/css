@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h3>부트스트랩 data-~~~ 속성에 대해서 </h3>
+  <p>data- 을 쓰면 데이터를 저장할 수 있다</p>
+
+  <ul class="nameList">
+    <li><a href="#" data-coco="20" data-info="인포값" data-user='{"id": "aaa123", "age" : 302}'>사과</a></li>
+    <li><a href="#" data-coco="30" data-user='{"id": "aaa123", "age" : 302}'>바나나</a></li>
+    <li><a href="#" data-coco="40" data-user='{"id": "aaa123", "age" : 302}'>귤</a></li>
+    <li><a href="#" data-coco="50" data-user='{"id": "aaa123", "age" : 302}'>파인애플</a></li>
+  </ul>
+
+  <script>
+    var nameList = document.querySelector(".nameList");
+    nameList.onclick = function () {
+      console.log("크릭");
+
+      //event
+      // event.preventDefault(); //고유 이벤트 중단하기
+      // if (event.target.tagName != "A") return; //A태그 아니면 리턴해서 중단
+
+      // console.dir(event.target);
+      console.log("데이터 셋"+event.target.dataset);
+      console.log(event.target.dataset.coco); //data-coco에 저장되는 값
+      console.log(event.target.dataset.info); //data-info에 저장되는 값
+      console.log(event.target.dataset.user); //data-info에 저장되는 값
+
+      //------
+      var obj =JSON.parse(event.target.dataset.user);
+      console.log("값 갖다쓰기" + obj);
+      console.log(obj);
+    }
+  </script>
+
+
+</body>
+
+</html>

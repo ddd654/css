@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    //AJAX 사용하기
+
+    //1 xhttpRequest
+    //2 fetchAPI <<강의에서는 이거
+    //3 Axios 라이브러리
+    //4 $.ajax()
+
+    // fetch("hello.txt")
+    // .then(function(response) {
+    //   response.text().then(function(data) {
+    //     console.log(data);
+    //   })
+    // })
+
+
+    //Promise는 fetch의 결과를 리턴해서 3가지 상태를 나타낸다
+    //1. fullfiled = 성공적 수행
+    //2. pending = 대기중
+    //3. reject = 거절, 실패
+
+    //이 객체 안에는 then() 이 있고 then(콜백)
+
+
+    // // var Promise = fetch("보고싶은 주소")
+    // var promise = fetch("hello.txt") //Promise 객체를 리턴해준다
+    // console.log(promise);
+    // //promise.then(콜백)
+    // promise.then(function(response) {
+    //   console.log(response);
+    // })
+
+
+
+    // console.log("여기 먼저 1");
+
+    // //위에꺼 하나로 쓰기
+    // fetch("hello.txt").then(function (response) {
+    //   console.log(response);
+    //   console.log("함수 안에 2");
+    // })
+
+    // console.log("그다음 3");
+
+    console.log("----------------");
+
+    // console.log("111");
+
+    // //위에꺼 하나로 쓰기
+    // fetch("hello.txt").then(function (response) {
+    //   console.log(response);
+    //   console.log("222");
+    // })
+
+    // console.log("333");
+    // ----------------------
+
+    // fetch("hello.txt")
+    //   .then(function (response) {
+    //     if (response.status != 200) {
+    //       console.log("요청에 실패했습니다");
+    //       return;
+    //     }
+
+    //     console.log(response);
+    //     //response에서 데이터를 꺼내보자
+
+    //     //text()의 결과가 promise 여서 then()을 쓸 수 있다
+    //     response.text().then(function (data) {
+    //       console.log(data);  //data를 찍어보자
+    //     })
+
+    //   })
+
+    //----------------------------
+    fetch("fruit.json")
+    .then(function(response){
+      response.json().then(function(data) {
+        console.log(data); //매개변수의 대이터 출력, 이용하기
+      })
+    })
+
+    //5-------------
+    fetch("hello.json")
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data) { //response  대신
+      return data;
+    })
+    .then(function(data) {
+      return data;
+      
+    })
+    .then(function(data) {
+      console.log(123, data); //이렇게 데이터를 받을수 있다
+    })
+    .catch(function (e) { // 에러나면 나오게 하기
+      console.log(e); 
+    })
+
+    // return쓰면 .then() 가능
+
+    
+
+  </script>
+</body>
+
+</html>
