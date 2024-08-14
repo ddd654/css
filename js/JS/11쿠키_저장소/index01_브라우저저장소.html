@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h4>localStorage와 sessionStorage</h4>
+  <p>브라우저 내에 키=값을 저장하는 저장소</p>
+  <p>JSP 새션과 무관하다, 다르다</p>
+
+
+  <button type="button" id="createSession">세션만들기</button>
+  <button type="button" id="removeSession">세션삭제하기</button>
+
+  <script>
+    var createSession = document.getElementById("createSession");
+    createSession.onclick = function () {
+
+      //JSP에서는 setAttrubute(), getAttribute(), removeAttribute() 
+
+      //값 저장
+      sessionStorage.setItem("aa", "사과"); // 키, 값
+      sessionStorage.setItem("bb", "바나나");
+      sessionStorage.setItem("cc", JSON.stringify(['a', 'b', 'c'])); //반드시 문자열만 저장가능해서
+      //stringify로 변환해서 저장했음
+
+      //값 얻기
+      var aaa = sessionStorage.getItem("aa");
+      var bbb = sessionStorage.getItem("bb");
+      var cc = sessionStorage.getItem("cc");
+
+      console.log(aaa);
+      console.log(bbb);
+      console.log(JSON.parse(cc));
+
+
+
+    }
+
+    var removeSession = document.getElementById("removeSession");
+    removeSession.onclick = function () {
+      sessionStorage.removeItem("aa");
+      alert("aaa 세션 삭제")
+    }
+
+    createSession.onclick = function () {
+
+      //JSP에서는 setAttrubute(), getAttribute(), removeAttribute() 
+
+      //값 저장
+      localStorage.setItem("aa", "사과"); // 키, 값
+      localStorage.setItem("bb", "바나나");
+      localStorage.setItem("cc", JSON.stringify(['a', 'b', 'c'])); //반드시 문자열만 저장가능해서
+      //stringify로 변환해서 저장했음
+
+      //값 얻기
+      var aaa = localStorage.getItem("aa");
+      var bbb = localStorage.getItem("bb");
+      var cc = localStorage.getItem("cc");
+
+      console.log(aaa);
+      console.log(bbb);
+      console.log(JSON.parse(cc));
+
+
+
+    }
+
+    var removeSession = document.getElementById("removeSession");
+    removeSession.onclick = function () {
+      localStorage.removeItem("aa");
+      alert("aaa 세션 삭제")
+    }
+    //세션은 껏다 키면 결국 다 사라짐
+    //로컬은 껏다 켜도 영구적으로 남아있다
+  </script>
+
+
+
+</body>
+
+</html>

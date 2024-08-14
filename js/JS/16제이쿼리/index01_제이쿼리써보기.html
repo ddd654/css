@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 제이쿼리 링크 -->
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+  <input type="text" name="name" id="apple" value="오렌지">
+
+
+  <script>
+
+    //js코드로 val() 함수 배워서 써보기 value
+    var apple = document.getElementById("apple");
+
+    console.log(apple);
+
+
+
+    //제이쿼리 써보기
+    // $("선택자")
+    var a = $("#apple")
+    console.log(a); //개발자 도구에서 보면 객체 나오는데, 이 함수들을 쓸 수 있다
+
+    var b = $("#apple")[0] //엘리먼트 접근 = 태그에 접근
+    console.log(b);
+
+    // 제이쿼리 함수 쓰기
+    // $("선택자").제이쿼리함수()
+    console.log("원래", apple.value);
+
+    var a = $("#apple").val() //값 반환 받기
+    console.log("제이쿼리", a);
+
+
+  </script>
+
+
+
+
+  <!-- ---------------------------------------------------- -->
+  <input type="text" id="melon">
+
+  <script>
+    var a = $("#apple").val()
+    console.log(a);
+
+    //값 수정하기
+    $("#melon").val("수박")
+    console.log(a);
+
+    //값을 얻음
+    var a = $("#apple").val()
+    console.log(a);
+
+    //값의 수정
+    $(".melon").val("짠!"); //웹 인풋 태그안에 값이 바뀌었다
+
+  </script>
+
+</body>
+
+</html>

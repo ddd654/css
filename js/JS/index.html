@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h4>다른 서버에서 요청</h4>
+
+    <button type="button" id="postBtn">post방식</button>
+
+
+
+    <script>
+        var postBtn = document.getElementById("postBtn");
+        postBtn.addEventListener("click", function(){
+            //서버가 다르면 전체경로
+            fetch("http://localhost:8181/getEntity",{ 
+                method : "post",
+                body : JSON.stringify({num : 1, name : "바나나"}), // JSON식으로 키=값 보내기
+                headers : {
+                    "Content-Type" : "application/json" // 5. 이거
+                }
+            })
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                console.log(data);
+            })
+        })
+    </script>
+
+</body>
+</html>

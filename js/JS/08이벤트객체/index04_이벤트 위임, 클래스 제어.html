@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h4>이벤트 위임, 클래스 제어</h4>
+
+  <div class="list">
+    <div>
+      <span>사과</span>
+      <button type="button" class="btn sel">선택</button>
+      <button type="button" class="btn del">삭제</button>
+    
+    </div>
+    <div>
+      <span>자두</span>
+      <button type="button" class="btn sel">선택</button>
+      <button type="button" class="btn del">삭제</button>
+    
+    </div>
+    <div>
+      <span>바나나</span>
+      <button type="button" class="btn sel">선택</button>
+      <button type="button" class="btn del">삭제</button>
+    
+    </div>
+    <div>
+      <span>복숭아</span>
+      <button type="button" class="btn sel">선택</button>
+      <button type="button" class="btn del">삭제</button>
+    
+    </div>
+  </div>
+
+  <script>
+    var list = document.querySelector(".list");
+    list.onclick = function name(params) {
+      console.log("클릭");
+
+      console.log(event.target.className);
+      console.log(event.target.classList);
+
+      if(event.target.classList.contains("sel")){//sel 클래스가 있으면
+        event.target.previousElementSibling.style.color = "red";
+        
+      } else if(event.target.classList.contains("del")){//del 클래스 포함된 경우
+        event.target.parentElement.remove();
+      }
+      
+    }
+  </script>
+</body>
+</html>

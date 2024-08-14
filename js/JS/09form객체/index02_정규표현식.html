@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <form action="list.board" name="loginForm">
+    아이디:<input type="id" name="id" placeholder="영문자 숫자 5~10글자 사이">
+    비밀번호:<input type="password" name="pw" placeholder="특문 포함 4~8글자">
+    <button type="button" onclick="validationCheck()">회원가입</button>
+  </form>
+
+  <script>
+    function validationCheck() {
+      console.log("클릭");
+      //영문자 숫자 5~10글자 사이
+      var reg = /^(?=.*[a-zA-Z])(?=.*[0-9]).{5,10}$/
+
+      //영문자 숫자 특수문자 8~15글자 사이
+      var reg2 = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,15}$/
+
+      //맞는지 검증은 test()를 사용한다
+      var form = document.loginForm;
+
+      //(비교할값)
+      if (!reg.test(form.id.value)) {
+        alert("아이디는 영문자 숫자 5~10글자 입니다")
+        form.id.focus();
+        return;
+
+      } else if (!reg2.test(form.pw.value)) {
+        alert("비밀번호는 8~15문자 입니다")
+        form.pw.focus();
+        return;
+
+      } else {
+        form.submit();
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    
+  <a href="index06_뒤로가기_ok.html">ok페이지로 이동하기</a>
+
+  <button type="button" onclick="history.go(+1)">앞으로 가기</button>
+
+  <button type="button" onclick="move()">기록변경하기</button>
+
+  <script>
+    //history.replaceState 브라우저의 기록을 변경할때 쓴다
+    //history.pushState 브라우저의 기록을 추가할때
+
+    function move(){
+      //history.pushState(null, '', "변경.html"); // 추가할data, 제목, URL주소
+      history.replaceState('back', '', null); // 이번엔 replaceState
+    
+    
+    }
+
+    //back을 넣어서 > history.state로 찾아서 쓸수 있다
+    console.log(history.state);
+    //사용자의 뒤로가기를 알 수 있다
+
+    if(history.state == 'back'){ //뒤로가기를 누르면
+
+      //console.log("사용자가 뒤로가기 사용했다");
+      alert("사용자가 뒤로가기를 함");
+
+      //뒤로가기로 다른 페이지로 보내버릴 수 있다
+    }
+
+  </script>
+</body>
+</html>

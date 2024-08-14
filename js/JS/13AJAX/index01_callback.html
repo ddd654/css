@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //어떤 기능이 하나 있음
+    function fruit(apple) { // 매개변수의 타입은 함수
+      apple("success");
+
+
+    }
+
+    //동기적 = 순서대로 실행된다는 것
+    //호출하기, 콜백함수
+    fruit(function (success) {
+      console.log(success); // func1리 실행해서 전달하는 결과값
+    })
+
+
+    //ex 
+    //비동기적 = 다양한 순서로 실행된다
+    function asyncFunc(apple) {
+      setTimeout(apple, 5000); //5s
+    }
+
+    console.log(1);
+
+    //콜백넣기
+    asyncFunc(function() {
+      console.log("콜백함수 동작함");
+    });
+
+    console.log(2);
+
+    //순서대로 진행되는게 아니여서 다중함수 실행 가능
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .movieList {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .movieList>.movie {
+      flex-basis: 33.3333%;
+      height: 300px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .movie>img {
+      width: 200px;
+    }
+
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  https://yts.mx/api
+
+  <hr>
+  <button type="button" onclick="ajax()">데이터 가져오기</button>
+
+  <div class="movieList">
+    <div class="movie">
+      <img src="#" alt="제목">
+      <div class="inner">
+        <p>제목</p>
+        <p>내용</p>
+      </div>
+    </div>
+
+    <!-- 
+    스타일 참조용
+    <div class="movie">
+      <img src="#" alt="제목">
+      <div class="inner">
+        <p>제목</p>
+        <p>내용</p>
+      </div>
+    </div>
+
+    <div class="movie">
+      <img src="#" alt="제목">
+      <div class="inner">
+        <p>제목</p>
+        <p>내용</p>
+      </div>
+    </div>
+
+    <div class="movie">
+      <img src="#" alt="제목">
+      <div class="inner">
+        <p>제목</p>
+        <p>내용</p>
+      </div>
+    </div>
+
+    <div class="movie">
+      <img src="#" alt="제목">
+      <div class="inner">
+        <p>제목</p>
+        <p>내용</p>
+      </div>
+    </div> 
+    -->
+
+  </div>
+
+  <div class="pageNation">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    <a href="#">10</a>
+  </div>
+
+  <div class="overlay">
+    로딩중이에요
+  </div>
+
+
+
+  <script>
+    //endpoint parameters 매개변수
+
+    var movieList = document.querySelector(".movieList");
+    var overlay = document.querySelector(".overlay");
+
+    var page = 1;
+    function ajax() {
+
+      //여기서 오버레이해야한다
+      overlay.style.display = "block";
+
+      fetch("https://yts.mx/api/v2/list_movies.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+        })
+
+
+      //get방식은 물음표
+      //요청 파라미터
+      fetch("https://yts.mx/api/v2/list_movies.json?sort_by=rating&genre=Action&page=" + page)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (obj) {
+          console.log(123, obj);
+
+
+          // var data123 = obj.data.movies
+          var data123 = obj["data"]["movies"]
+          console.log(data123);
+
+          var str = '';
+
+          for (var i = 0; i < data123.length; i++) {
+            var img = data123[i].medium_cover_image;
+            var title = data123[i].title;
+            var summary = data123[i].summary;
+
+            console.log('출력해보기', img, title, summary);
+
+            str += '<div class="movie">';
+            str += '<img src="' + img + '" alt="' + title + '">'; // 홑 따옴표 이미지..
+            str += '<div class="inner">';
+            str += '<p>' + title + '</p>';
+            str += '<p>' + summary + '</p>';
+            str += '</div>';
+            str += '</div>';
+
+            //movieList에 한번에 넣어준다
+            console.log(str);
+          }
+
+          movieList.innerHTML = str;
+          
+          //오버레이 여기
+          overlay.style.display = "none";
+
+        })
+
+    }
+
+    //pageNation > 부모에 이벤트로 전체걸기
+    // var pageNation = document.querySelector(".pageNation");
+    // pageNation.addEventListener("click", function () {
+
+    //   event.preventDefault();// a태그 이벤트 중단하기
+    //   if (event.target.tagName != "A")  return; // a태그가 아니면 종료하기
+
+    //   page = event.target.innerHTML; //멤버변수 page에 저장하기
+    //   ajax();
+
+    // })
+
+    //pageNation이벤트 -> 부모님한테 이벤트 걸면, 자식에도 이벤트 걸림
+    var pageNation = document.querySelector(".pageNation");
+    pageNation.addEventListener("click", function () {
+
+      event.preventDefault(); //a의 이벤트 중단
+      if (event.target.tagName != "A") return; //A가 아니면 종료
+
+      page = event.target.innerHTML; //멤버변수 page에 저장
+      ajax();
+    })
+
+
+  </script>
+</body>
+
+</html>

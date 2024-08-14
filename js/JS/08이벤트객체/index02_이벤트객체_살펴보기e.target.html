@@ -19,6 +19,7 @@
   <p class="result"></p>
 
   <script>
+    // 클릭이벤트를 부분마다 넣기 힘들어서
     // 윗 태그에 부모태그에 이벤트 > 자식들에게 이벤트 위임됨
     var box = document.querySelector(".box"); //li의 부모 box
     var result = document.querySelector(".result");
@@ -30,17 +31,21 @@
       // 이벤트 로그 실행해서 나온 타겟
       console.log(event.target); //이벤트가 동작한 태그 > li
       console.log(event.currentTarget); //이벤트가 걸려있는 태그 > ul
-
       console.log(event.target.innerHTML);
-      result.innerHTML = event.target.innerHTML; //result 클래스 태그안에 li 값넣기
-      result.innerHTML = event.currentTarget.innerHTML; //result 클래스 태그안에 ui 값넣기
+
+      //result.innerHTML = event.target.innerHTML; //result 클래스 태그안에 li 값넣기
+      //result.innerHTML = event.currentTarget.innerHTML; //result 클래스 태그안에 ui 값넣기
 
 
       console.dir(event.target);
-      if (event.target.tagName == "UL") {
+      // if (event.target.tagName == "UL") {
+      //   return; //UL이면 종료한다
+      // }
+      if (event.target.tagName != "LI") {
         return; //UL이면 종료한다
       }
-      result.innerHTML = event.currentTarget.innerHTML;
+
+      result.innerHTML = event.target.innerHTML;
 
 
       //e.target~~~  괄호안에 e 넣어서 사용할 수 이씀
