@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Shape {
+            funtion = () => {
+                console.log("coco");
+
+            }
+        }
+
+        class Rect extends Shape{
+            //생성자
+            constructor(width, height){
+                super() // js는 super(); 필수
+                this.width = width;
+                this.height =height;
+            }
+
+            function = () => {
+                console.log("gogo");
+                
+            }
+            
+        }   
+
+        //객체로
+        let r = new Rect();;
+        r.funtion();
+    
+    </script>
+
+</body>
+
+</html>

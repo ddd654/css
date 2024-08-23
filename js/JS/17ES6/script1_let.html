@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // var a =22;
+        // if(true){
+        //     var a = 333;
+        // }
+        // console.log(a);
+
+        let a = 11;
+        if (true) {
+            let a = 33; //중복 선언을 막는 let
+
+        }
+        console.log(a);
+
+        
+        //
+        const gender = "man";
+        //gender = "coco";
+        console.log(gender);
+        
+
+        const arr = ["apple", "banana", "coco"];
+        arr[0] = "사과";
+        arr[1] = "바나";
+
+        console.log(arr);
+        
+    </script>
+
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+    </ul>
+
+    <script>
+        //li를 얻어서 반복으로 이벤트를 건다고 하면?
+        var li = document.querySelectorAll("ul >li")
+        for(var i = 0; i < li.length; i++){
+            li[i].addEventListener("click", function(){
+                console.log(i);
+            })
+        }
+        //i는 5로 전역변수 취급한다
+
+
+    </script>
+
+</body>
+
+</html>

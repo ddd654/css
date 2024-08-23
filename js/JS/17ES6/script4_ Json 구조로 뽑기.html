@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //제이슨 구조에서 효율적
+        let list = [
+            {
+                "num": 1,
+                "title": "apple",
+                "info": ["coco", "paper"],
+                "profile": { birth: "2222", img: "aaa.png" }
+
+            }, {
+                "num": 1,
+                "title": "apple",
+                "info": ["geto", "ray"],
+                "profile": { birth: "3333", img: "bbb.png" }
+
+            }
+        ]
+
+        //두번째 객체
+        let [, a] = list;
+        console.log(a);
+
+        let [, { num, title }] = list;
+        console.log(num, title);
+
+        let [, { info: [x, y] }] = list;
+        console.log(x, y);
+
+        //두번째 객체 profile안에 있는 birth, img
+        let [, { profile: obj}] = list; // 이건 
+        console.log(obj)
+        let [, { profile: {birth, img} }] = list;
+        console.log(birth, img);
+        
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function sum1(x, y) {
+            return x + y;
+        }
+
+
+        const arr = [1, 2, 3];
+        console.log(...arr); //배열 나열하기
+
+        //위에꺼 옆에다 추가하기
+        const num = [11, 22, 33, ...arr];
+        console.log(num);
+
+        const num1 = [1, ...arr, 44, 55];
+        console.log(num1);
+
+        //배열의 복사
+        const num3 = [...arr]
+        console.log(num3);
+
+        //배열의 결합
+        const num4 = [...arr, ...arr, ...arr]
+        console.log(num4);
+
+    </script>
+
+
+    <script>
+        //함수에서
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+
+        //sum(1,2,3,);
+        console.log("안되는거 " + sum(...arr, 333, 222));
+        console.log(sum(333, 222, ...arr));
+
+        //
+        function sum3(x, ...arr) {
+            return [x, ...arr];
+        }
+
+        console.log(sum3(1, 2, 3, 4, 5));
+        console.log(sum3(1, ...[22,33,55]));
+
+        //함수의 default 매개값
+        function sum4(a, b = 10, c= 33) {
+            return a + b + c;
+        }
+        console.log(sum4(5)); //5 + 10 + 33
+        console.log(sum4(1,2)); // 1 + 2 + 33
+        console.log(sum4(1,2,3)); // 1 + 2 + 3
+        console.log(sum4(1, ...[7,7,7])); //1 + 7 + 7
+
+        
+
+
+    </script>
+
+
+</body>
+
+</html>
