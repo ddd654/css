@@ -12,10 +12,10 @@ node js는 자바 스크립트 런타임 환경 관리를 해준다
 5. npm create react-app react-basic
 6. 바로 cd react-basic, npm start
 7. ctrl + c 눌러서 작업 종료
-8. 
+   
 </details>
-- clone 할때 node_module 없으면> npm install
 
+- clone 할때 node_module 없으면> npm install
 + npm은 node 패키지 관리자 도구
 * npx 는 라이브러리 하나만 실행
 + 비슷한 패키지 도구인 yarn도 있다
