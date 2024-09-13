@@ -10,7 +10,11 @@ export let info = () => {
     console.log(name, age)
 }
 
+let x = 10;
+let y = 22;
 
+let add = () => x + y;
+export { x, y, add }
 
 
 

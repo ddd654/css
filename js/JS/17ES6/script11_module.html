@@ -6,16 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="module">
+    <script type="module"> // << 이거
         //html5 에서 module 쓰려면 type module붙이기
 
-        import {name, age, info} from './script11.js'
+        // 08-26
 
-        console.log(name);
-        console.log(age);
-        info();
+        //import 구문1
+        // import {name, age, info} from './script11.js'
+        // import { x, y, add } from "./script11_module.js";
 
+        // console.log(name);
+        // console.log(age);
+        // info();
 
+        //import2
+        // import * as example from './script11_module.js';
+
+        // console.log(example.name);
+        // console.log(example.age);
+        // console.log(example.info);
+        
+        //import3
+        import{x as a1, y as a2, add as a3} from './script11_module.js';
+        console.log(a1, a2, a3);
+        
 
     </script>
 </body>

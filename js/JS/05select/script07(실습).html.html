@@ -43,22 +43,22 @@
         var btn = document.querySelector("#btn");
         var result = document.querySelector("#result");
 
-        btn.onclick = function() {
+        btn.onclick = function () {
             //
             var arr = new Array(); //빈배열 만들기
 
             for (var i = 0; i < seat.length; i++) {
-                if(seat[i].checked){
+                if (seat[i].checked) {
                     arr.push(seat[i].value);
 
                 }
             }
 
-            if(arr.length== 0){
+            if (arr.length == 0) {
                 alert("좌선을 1개이상 선택하세요")
             } else {
-                var str ="";
-                for(var i = 0; i < arr.length; i++){
+                var str = "";
+                for (var i = 0; i < arr.length; i++) {
                     str += arr[i] + "번";
                 }
                 result.innerHTML = str;
@@ -74,7 +74,7 @@
 
         // btn.onclick = function() {
         //     //seat태그들 에서 checked되어 있는 속성만 배열에 추가
-        //     var arr = new Array(); //빈배열          
+        //     var arr = new Array(); //빈배열
 
         //     for(var i = 0; i < seat.length; i++) {
         //         if(seat[i].checked) {
@@ -96,7 +96,7 @@
         // }
 
 
-        // //좌석 체크했을때 
+        // //좌석 체크했을때
         // //값 바꾸기
         // seat.onclick = function () {
         //     console.log("seat 선택");
