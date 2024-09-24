@@ -16,7 +16,8 @@
             {
                 "num": 1,
                 "title": "apple",
-                "info": ["coco", "paper"],
+                // 배열
+                "info": ["coco", "paper"], 
                 "profile": { birth: "2222", img: "aaa.png" }
 
             }, {
@@ -25,12 +26,14 @@
                 "info": ["geto", "ray"],
                 "profile": { birth: "3333", img: "bbb.png" }
 
+            }, {
+                
             }
         ]
 
-        //두번째 객체
+        //두번째 객체를 a에 넣는다
         let [, a] = list;
-        console.log(a);
+        console.log('두번째 객체', a);
 
         let [, { num, title }] = list;
         console.log(num, title);
@@ -41,6 +44,7 @@
         //두번째 객체 profile안에 있는 birth, img
         let [, { profile: obj}] = list; // 이건 
         console.log(obj)
+        
         let [, { profile: {birth, img} }] = list;
         console.log(birth, img);
         

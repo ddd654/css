@@ -11,6 +11,17 @@
 
   <script>
     //익명함수에서 매개변수
+    var apple = function (){
+      i= 0;
+      while(i <5){
+        document.write(i);
+        i +=1;
+      }
+    }
+
+    console.log('dd', apple());
+    
+
 
     var func = function (a, b) {
       return a + b;
@@ -19,14 +30,13 @@
 
     //익명함수 만들기ex
     var cal1 = function (x) {
-
       if (x % 2 == 0) {
         return "홀수";
       } else {
         return "짝수";
       }
-
     }
+
     cal1(10);
     console.log(cal1(10));
 
@@ -41,8 +51,8 @@
 
     //js에서는 함수의 매개변수를 지키지 않아도 호출된다 <<
     //그래도 지키는 것이 좋다
-    var fun = function (a, b) {
 
+    var fun = function (a, b) {
       //매개변수는 arguments 객체로 전달된다
       console.log("첫번째 매개변수"+arguments[0]);
       console.log("두번째 매개변수"+arguments[1]);
